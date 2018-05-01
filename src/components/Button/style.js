@@ -42,13 +42,13 @@ export const sizes = {
   },
   text: {
     small: {
-      fontSize: 14,
+      fontSize: 14
     },
     medium: {
-      fontSize: 16,
+      fontSize: 16
     },
     large: {
-      fontSize: 16,
+      fontSize: 20
     },
   }
 };

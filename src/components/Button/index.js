@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableHighlight, View, Text } from "react-native";
+import { TouchableHighlight, View, Text, Platform } from "react-native";
 import { Button as BaseButton } from "react-native-elements";
 import Flex from "./../FlexBox"
 import { commons, types, sizes } from "./style";
@@ -23,6 +23,7 @@ export default class extends React.Component {
       textStyle = {},
       disabledStyle = {},
       Component = disabled ? View : TouchableHighlight,
+      japanese = false,
       ...props
     } = this.props;
 
@@ -38,6 +39,12 @@ export default class extends React.Component {
           ...(
             outline ? {backgroundColor: "transparent"} : {}
           ),
+          ...(
+            Platform.OS == "ios" && japanese ? {
+              paddingBottom: sizes.button[size].paddingBottom - 4,
+              paddingTop   : sizes.button[size].paddingTop + 4
+            }                    : {}
+          ),
           ...style
         }}
         underlayColor={!disabled && types.underlayColor[type]}
@@ -51,11 +58,11 @@ export default class extends React.Component {
           style={{
             ...commons.text,
             ...types.text[type],
-            ...sizes.button[size],
+            ...sizes.text[size],
             ...(
               outline && !this.state.isShowUnderlay ? types.outlineText[type] : {}
             ),
-            ...textStyle
+            ...textStyle,
           }}
         >
           {children}
