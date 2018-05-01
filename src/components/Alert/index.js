@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { commons, types } from "./style";
-import { Heading } from "react_native_template_1/src/components"
+import Heading from "../Heading"
 
 export default ({
   type = "info", // primary secondary success danger warning info light dark
