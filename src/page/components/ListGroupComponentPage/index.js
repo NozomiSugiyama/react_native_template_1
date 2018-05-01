@@ -89,13 +89,31 @@ export default class extends React.Component {
             <ListGroup>
               <ListGroupItem badgeText="1">Пётр Ильич Чайковский</ListGroupItem>
               <ListGroupItem type="primary"   badgeText="1">Ludwig van Beethoven</ListGroupItem>
-              <ListGroupItem type="secondary" badgeText="1">Johann Sebastian Bach</ListGroupItem>
-              <ListGroupItem type="success"   badgeText="1">Johannes Brahms</ListGroupItem>
-              <ListGroupItem type="danger"    badgeText="1">Franz Joseph Haydn</ListGroupItem>
-              <ListGroupItem type="warning"   badgeText="1">Frédéric François Chopin</ListGroupItem>
-              <ListGroupItem type="info"      badgeText="1">Antonio Lucio Vivaldi</ListGroupItem>
-              <ListGroupItem type="light"     badgeText="1">Wolfgang Amadeus Mozart</ListGroupItem>
-              <ListGroupItem type="dark"      badgeText="1">Georg Friedrich Händel</ListGroupItem>
+              <ListGroupItem type="secondary" badgeText="10">Johann Sebastian Bach</ListGroupItem>
+              <ListGroupItem type="success"   badgeText="100">Johannes Brahms</ListGroupItem>
+              <ListGroupItem type="danger"    badgeText="new">Franz Joseph Haydn</ListGroupItem>
+              <ListGroupItem type="warning"   badgeText="test">Frédéric François Chopin</ListGroupItem>
+              <ListGroupItem type="info"      badgeText="notfy">Antonio Lucio Vivaldi</ListGroupItem>
+              <ListGroupItem type="light"     badgeText="sample">Wolfgang Amadeus Mozart</ListGroupItem>
+              <ListGroupItem type="dark"      badgeText="badge">Georg Friedrich Händel</ListGroupItem>
+            </ListGroup>
+          </View>
+        </View>
+        <View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Japanese</Heading>
+            <ListGroup>
+              <ListGroupItem badgeText="1"    badgeText="新潮">百年泥</ListGroupItem>
+              <ListGroupItem type="primary"   badgeText="文藝">おらおらでひとりいぐも</ListGroupItem>
+              <ListGroupItem type="secondary" badgeText="文學界">影裏（えいり）</ListGroupItem>
+              <ListGroupItem type="success"   badgeText="新潮">しんせかい</ListGroupItem>
+              <ListGroupItem type="danger"    badgeText="文學界">コンビニ人間</ListGroupItem>
+              <ListGroupItem type="warning"   badgeText="群像">異類婚姻譚（いるいこんいんたん）</ListGroupItem>
+              <ListGroupItem type="info"      badgeText="文學界">死んでいない者</ListGroupItem>
+              <ListGroupItem type="light"     badgeText="文學界">火花</ListGroupItem>
+              <ListGroupItem type="dark"      badgeText="文學界">スクラップ・アンド・ビルド</ListGroupItem>
             </ListGroup>
           </View>
         </View>

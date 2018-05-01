@@ -2,7 +2,12 @@
   "name": "react_native_template_1",
   "displayName": "react_native_template_1",
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "ios": {
+      "bundleIdentifier": "no"
+    },
+    "android": {
+      "package": "no"
+    }
   }
 }
-

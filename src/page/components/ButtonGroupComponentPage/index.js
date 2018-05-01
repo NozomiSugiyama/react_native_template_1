@@ -22,7 +22,7 @@ export default class extends React.Component {
             <Heading size="xsmall" align="center">Standard</Heading>
             <ButtonGroup>
               <Button>Do Le Mi</Button>
-              <Button>ふぁそら</Button>
+              <Button>😢😢😢</Button>
               <Button>しど♪</Button>
             </ButtonGroup>
           </View>

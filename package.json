@@ -2,12 +2,8 @@
   "name": "react_native_template_1",
   "version": "0.0.1",
   "private": true,
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
     "test": "jest"
   },
   "_scripts": {
@@ -28,7 +24,6 @@
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
     "react-test-renderer": "16.3.2",
-    "react-native-scripts": "1.14.0",
     "jest-expo": "27.0.1"
   },
   "jest": {

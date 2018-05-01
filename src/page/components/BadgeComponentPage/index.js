@@ -74,6 +74,26 @@ export default class extends React.Component {
               <Badge pill type="dark"      onPress={() => undefined}>dark</Badge>
             </FlexBox>
           </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Japanese</Heading>
+            <FlexBox
+              flexWrap
+              alignItems="center"
+              justifyContent="center"
+              style={styles.badgeList}
+            >
+              <Badge type="primary"  >石井遊佳</Badge>
+              <Badge type="secondary">若竹千佐子</Badge>
+              <Badge type="success"  >沼田真佑</Badge>
+              <Badge type="danger"   >山下澄人</Badge>
+              <Badge type="warning"  >村田沙耶香</Badge>
+              <Badge type="info"     >本谷有希子</Badge>
+              <Badge type="light"    >滝口悠生</Badge>
+              <Badge type="dark"     >又吉直樹</Badge>
+            </FlexBox>
+          </View>
         </View>
       </Page>
     );

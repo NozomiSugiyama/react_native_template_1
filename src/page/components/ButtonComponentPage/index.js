@@ -37,6 +37,21 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
+            <Heading size="xsmall" align="center">Size</Heading>
+            <FlexBox
+              flexWrap
+              alignItems="center"
+              justifyContent="center"
+              style={styles.badgeList}
+            >
+              <Button size="small">Small</Button>
+              <Button size="medium">Medium</Button>
+              <Button size="large">Large</Button>
+            </FlexBox>
+          </View>
+          <View
+            style={styles.content}
+          >
             <Heading size="xsmall" align="center">Disabled</Heading>
             <FlexBox
               flexWrap
@@ -57,7 +72,7 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
-            <Heading size="xsmall" align="center">Disabled</Heading>
+            <Heading size="xsmall" align="center">Outline</Heading>
             <FlexBox
               flexWrap
               alignItems="center"
@@ -72,6 +87,25 @@ export default class extends React.Component {
               <Button type="info"      onPress={() => undefined} outline>Info</Button>
               <Button type="light"     onPress={() => undefined} outline>Light</Button>
               <Button type="dark"      onPress={() => undefined} outline>Dark</Button>
+            </FlexBox>
+          </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Japanese</Heading>
+            <FlexBox
+              flexWrap
+              alignItems="center"
+              justifyContent="center"
+              style={styles.badgeList}
+            >
+              <Button type="primary"   japanese         >日本語</Button>
+              <Button type="secondary" japanese outline>テスト</Button>
+              <Button type="info"               outline>English</Button>
+              <Button type="success"   japanese         >って感じ</Button>
+              <Button size="small"     japanese         >てすと</Button>
+              <Button size="medium" type="info" japanese>購入する！</Button>
+              <Button size="large"     japanese         >次のPage</Button>
             </FlexBox>
           </View>
         </View>
