@@ -7,7 +7,10 @@ export const commons = {
     borderRadius: 4,
     overflow: "hidden"
   },
-  insideItem: {
+  verticalItem: {
     borderTopWidth: 1,
+  },
+  horizontalItem: {
+    borderLeftWidth: 1,
   }
 }

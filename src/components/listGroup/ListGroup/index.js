@@ -7,9 +7,11 @@ export default ({
   children,
   style = {},
   selectedIndex,
+  orientation = "vertical", // vertical horizontal
+  Component = orientation == "horizontal" ? FlexBox : View,
   ...props
 }) => 
-  <View
+  <Component
     style={{
       ...commons.host,
       ...style
@@ -26,7 +28,12 @@ export default ({
               key: i,
               style: {
                 ...(x.props.style ? x.props.style : {}),
-                ...((i !== 0) ? commons.insideItem : {})
+                ...(
+                  (i !== 0) ?
+                    orientation == "vertical" ? commons.verticalItem
+                  :                             commons.horizontalItem
+                :             {}
+                )
               },
               selected: selectedIndex == i
             }
@@ -35,4 +42,4 @@ export default ({
       : children
       )
     }
-  </View>
+  </Component>
