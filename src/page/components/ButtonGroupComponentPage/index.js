@@ -21,9 +21,24 @@ export default class extends React.Component {
           >
             <Heading size="xsmall" align="center">Standard</Heading>
             <ButtonGroup>
-              <Button>Do Le Mi</Button>
-              <Button>😢😢😢</Button>
-              <Button>しど♪</Button>
+              <Button onPress={_ => undefined}>Do Le Mi</Button>
+              <Button onPress={_ => undefined}>😢😢😢</Button>
+              <Button onPress={_ => undefined} japanese>しど♪</Button>
+            </ButtonGroup>
+            <ButtonGroup>
+              <Button onPress={_ => undefined}>1</Button>
+              <Button onPress={_ => undefined}>2</Button>
+              <Button onPress={_ => undefined}>3</Button>
+            </ButtonGroup>
+            <ButtonGroup>
+              <Button onPress={_ => undefined}>1</Button>
+              <Button onPress={_ => undefined}>2</Button>
+              <Button onPress={_ => undefined}>3</Button>
+            </ButtonGroup>
+            <ButtonGroup>
+              <Button onPress={_ => undefined} outline>1st</Button>
+              <Button onPress={_ => undefined} outline>2st</Button>
+              <Button onPress={_ => undefined} outline>Module</Button>
             </ButtonGroup>
           </View>
         </View>
