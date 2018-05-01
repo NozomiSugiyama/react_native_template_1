@@ -1,6 +1,7 @@
 import React from "react";
 import { TouchableHighlight, View, Text } from "react-native";
 import { Button as BaseButton } from "react-native-elements";
+import Flex from "./../FlexBox"
 import { commons, types, sizes } from "./style";
 
 export default class extends React.Component {
@@ -26,7 +27,8 @@ export default class extends React.Component {
     } = this.props;
 
     return (
-      <Component
+      <Flex
+        component={Component}
         style={{
           ...commons.button,
           ...types.button[type],
@@ -39,12 +41,18 @@ export default class extends React.Component {
           ),
           ...buttonStyle
         }}
+        flexDirection="row"
+        justifyContent="center"
+        alignItems="flex-start"
+        flexWrap
         underlayColor={!disabled && types.underlayColor[type]}
         onShowUnderlay={() => this.setState({isShowUnderlay: true})}
         onHideUnderlay={() => this.setState({isShowUnderlay: false})}
         {...props}
       >
         <Text
+          numberOfLines={1}
+          ellipsizeMode="tail"
           style={{
             ...commons.text,
             ...types.text[type],
@@ -57,7 +65,7 @@ export default class extends React.Component {
         >
           {children}
         </Text>
-      </Component>
+      </Flex>
     )
   }
 }

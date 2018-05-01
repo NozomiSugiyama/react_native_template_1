@@ -7,7 +7,7 @@ export const commons = {
     marginLeft: 4,
     marginRight: 4,
     marginTop: 2,
-    marginBottom: 2
+    marginBottom: 2,
   },
   disabledButton: {
     opacity: 0.65
@@ -15,7 +15,7 @@ export const commons = {
   text: {
     ...fonts.fontPrimarySemiBold,
     textAlign: "center",
-    fontWeight: "400"
+    fontWeight: "400",
   }
 }
 
