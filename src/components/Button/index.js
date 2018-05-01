@@ -19,7 +19,7 @@ export default class extends React.Component {
       size = "medium", // small medium large
       type = "primary", // primary secondary success danger warning info light dark
       disabled = false,
-      buttonStyle = {},
+      style = {},
       textStyle = {},
       disabledStyle = {},
       Component = disabled ? View : TouchableHighlight,
@@ -39,7 +39,7 @@ export default class extends React.Component {
           ...(
             outline ? {backgroundColor: "transparent"} : {}
           ),
-          ...buttonStyle
+          ...style
         }}
         flexDirection="row"
         justifyContent="center"
