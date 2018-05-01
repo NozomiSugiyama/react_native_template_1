@@ -1,0 +1,6 @@
+export { default as AlertComponentPage }     from "./AlertComponentPage"
+export { default as AvatarComponentPage }    from "./AvatarComponentPage"
+export { default as BadgeComponentPage }     from "./BadgeComponentPage"
+export { default as ButtonComponentPage }    from "./ButtonComponentPage"
+export { default as HeadingComponentPage }   from "./HeadingComponentPage"
+export { default as ListGroupComponentPage } from "./ListGroupComponentPage"
