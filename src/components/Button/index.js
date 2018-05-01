@@ -27,8 +27,7 @@ export default class extends React.Component {
     } = this.props;
 
     return (
-      <Flex
-        component={Component}
+      <Component
         style={{
           ...commons.button,
           ...types.button[type],
@@ -41,10 +40,6 @@ export default class extends React.Component {
           ),
           ...style
         }}
-        flexDirection="row"
-        justifyContent="center"
-        alignItems="flex-start"
-        flexWrap
         underlayColor={!disabled && types.underlayColor[type]}
         onShowUnderlay={() => this.setState({isShowUnderlay: true})}
         onHideUnderlay={() => this.setState({isShowUnderlay: false})}
@@ -65,7 +60,7 @@ export default class extends React.Component {
         >
           {children}
         </Text>
-      </Flex>
+      </Component>
     )
   }
 }
