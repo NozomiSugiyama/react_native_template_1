@@ -18,7 +18,7 @@ export default class extends React.Component {
         style={styles.host}
         {...this.props}
       >
-        <Heading>GroupList</Heading>
+        <Heading>ListGroup</Heading>
         <View>
           <View
             style={styles.content}
