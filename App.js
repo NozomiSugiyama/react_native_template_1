@@ -7,6 +7,7 @@ import {
   AvatarComponentPage,
   BadgeComponentPage,
   ButtonComponentPage,
+  ButtonGroupComponentPage,
   HeadingComponentPage,
   ListGroupComponentPage
 } from "react_native_template_1/src/page/components";
@@ -47,6 +48,7 @@ export default class extends React.Component {
             key="topPage"
             component={TopPage}
             title="top-page"
+            initial={true}
           />
           <Scene 
             key="alertComponentPage"
@@ -69,6 +71,12 @@ export default class extends React.Component {
             title="button-component-page"
           />
           <Scene 
+            key="buttonGroupComponentPage"
+            component={ButtonGroupComponentPage}
+            title="button-group-component-page"
+            // initial={true}
+          />
+          <Scene 
             key="headingComponentPage"
             component={HeadingComponentPage}
             title="heading-component-page"
@@ -77,7 +85,6 @@ export default class extends React.Component {
             key="listGroupComponentPage"
             component={ListGroupComponentPage}
             title="list-group-component-page"
-            initial={true}
           />
         </Scene>
       </Router>

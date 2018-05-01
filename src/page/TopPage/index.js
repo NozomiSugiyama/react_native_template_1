@@ -34,6 +34,7 @@ export default class extends React.Component {
             <ListGroupItem onPress={() => Actions.avatarComponentPage()}>Avatar</ListGroupItem>
             <ListGroupItem onPress={() => Actions.badgeComponentPage()}>Badge</ListGroupItem>
             <ListGroupItem onPress={() => Actions.buttonComponentPage()}>Button</ListGroupItem>
+            <ListGroupItem onPress={() => Actions.buttonGroupComponentPage()}>ButtonGroup</ListGroupItem>
             <ListGroupItem onPress={() => Actions.headingComponentPage()}>Heading</ListGroupItem>
             <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
           </ListGroup>
