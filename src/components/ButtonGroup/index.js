@@ -11,12 +11,13 @@ export default ({
 }) =>
   <FlexBox
     style={{
+      ...commons.host,
       ...style
     }}
     {...props}
   >
     {
-      (Array.isArray(children) 
+      (Array.isArray(children)
       ? children.map((x, i) =>
           React.cloneElement(
             x,
@@ -24,7 +25,11 @@ export default ({
               ...x.props,
               key: i,
               style: {
+                ...commons.item,
                 ...(x.props.style ? x.props.style : {}),
+                ...(i !== 0 ? { borderLeftWidth: 1 } : {}), // not first
+                ...(i === 0 ? { borderTopLeftRadius: 4, borderBottomLeftRadius: 4 } : {}), // first
+                ...((i + 1) === children.length ? { borderTopRightRadius: 4, borderBottomRightRadius: 4 } : {}), // last
               },
             }
           )
