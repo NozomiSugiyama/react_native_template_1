@@ -81,7 +81,7 @@ export default class extends React.Component {
             key="CheckboxComponentPage"
             component={CheckboxComponentPage}
             title="checkbox-component-page"
-            initial={true}
+            // initial={true}
           />
           <Scene 
             key="headingComponentPage"
