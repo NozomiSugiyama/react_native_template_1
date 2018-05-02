@@ -8,6 +8,7 @@ import {
   BadgeComponentPage,
   ButtonComponentPage,
   ButtonGroupComponentPage,
+  CheckboxComponentPage,
   HeadingComponentPage,
   ListGroupComponentPage
 } from "react_native_template_1/src/page/components";
@@ -48,7 +49,7 @@ export default class extends React.Component {
             key="topPage"
             component={TopPage}
             title="top-page"
-            initial={true}
+            // initial={true}
           />
           <Scene 
             key="alertComponentPage"
@@ -75,6 +76,12 @@ export default class extends React.Component {
             component={ButtonGroupComponentPage}
             title="button-group-component-page"
             // initial={true}
+          />
+          <Scene 
+            key="CheckboxComponentPage"
+            component={CheckboxComponentPage}
+            title="checkbox-component-page"
+            initial={true}
           />
           <Scene 
             key="headingComponentPage"

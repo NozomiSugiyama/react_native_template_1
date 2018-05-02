@@ -9,7 +9,7 @@ export default ({
   textStyle = {},
   title = "",
   children,
-  props
+  ...props
 }) =>
   <View
     style={{
