@@ -1,13 +1,20 @@
 import React from "react"
 import { Text, View } from "react-native"
 import { Actions } from "react-native-router-flux"
-import { Button, Heading, Avatar, FlexBox } from "react_native_template_1/src/components"
+import { Button, Heading, Avatar, FlexBox, Switch } from "react_native_template_1/src/components"
 import { ListGroup, ListGroupItem } from "react_native_template_1/src/components/listGroup"
 import avatarImage from "react_native_template_1/assets/images/avatar.jpg"
 
 import styles from "./styles"
 
 export default class extends React.Component {
+  componentWillMount() {
+    this.setState({
+      switch1Enabled: false,
+      switch2Enabled: false,
+    })
+  }
+
   render() {
     return (
       <FlexBox 
@@ -39,6 +46,16 @@ export default class extends React.Component {
             <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
           </ListGroup>
         </View>
+        <Switch
+          onPress={() => this.setState({switch1Enabled: !this.state.switch1Enabled})}
+          enabled={this.state.switch1Enabled}
+        />
+        <Switch 
+          disabledText="no"
+          enabledText="yes"
+          onPress={() => this.setState({switch2Enabled: !this.state.switch2Enabled})}
+          enabled={this.state.switch2Enabled}
+        />
       </FlexBox>
     );
   }

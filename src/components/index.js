@@ -6,5 +6,6 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export { default as FlexBox }     from "./FlexBox";
 export { default as Heading }     from "./Heading";
 export { default as Image }       from "./Image";
-export { default as Page }        from "./Page";
 export { default as listGroup }   from "./listGroup"
+export { default as Page }        from "./Page";
+export { default as Switch }      from "./Switch";
