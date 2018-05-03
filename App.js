@@ -102,7 +102,6 @@ export default class extends React.Component {
             key="switchComponentPage"
             component={SwitchComponentPage}
             title="switch-component-page"
-            initial={true}
           />
         </Scene>
       </Router>

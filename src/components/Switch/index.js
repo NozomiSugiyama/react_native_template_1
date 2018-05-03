@@ -8,7 +8,7 @@ UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
 export default ({
-  isActive = false,
+  isActive = true,
   type = "primary", // primary secondary success danger warning info light dark
   disabledText,
   enabledText,
@@ -18,9 +18,10 @@ export default ({
   pill = true,
   textStyle = {},
   style = {},
+  Component = isActive ? TouchableOpacity : View ,
   ...props
 }) =>
-  <TouchableOpacity
+  <Component
     activeOpacity={1}
     style={{
       ...commons.host,
@@ -31,6 +32,7 @@ export default ({
              : {}
       ),
       ...(enabled ? commons.enabledHost: commons.disabledHost),
+      ...(!isActive ? { opacity: 0.8 } : {}),
       ...style
     }}
     onPress={() => {
@@ -103,4 +105,4 @@ export default ({
         </Text>
       </View>
     </View>
-  </TouchableOpacity>
+  </Component>

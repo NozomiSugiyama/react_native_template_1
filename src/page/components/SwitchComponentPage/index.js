@@ -209,20 +209,23 @@ export default class extends React.Component {
                 type="primary"
                 disabledText="no"
                 enabledText="yes"
+                isActive={false}
               />
               <Switch
                 onPress={() => undefined}
-                enabled={this.state.switch22Enabled}
+                enabled={true}
                 type="secondary"
                 pill={false}
+                isActive={false}
               />
               <Switch
                 onPress={() => undefined}
-                enabled={this.state.switch23Enabled}
+                enabled={false}
                 type="success"
                 disabledText="no"
                 enabledText="yes"
                 pill={false}
+                isActive={false}
               />
             </FlexBox>
           </View>
