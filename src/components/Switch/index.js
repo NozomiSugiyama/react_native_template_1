@@ -8,12 +8,11 @@ UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
 export default ({
-  actived= false,
+  isActive = false,
   type = "primary", // primary secondary success danger warning info light dark
   disabledText,
   enabledText,
   children,
-  disabled = false,
   enabled = false,
   onPress = () => undefined,
   pill = true,

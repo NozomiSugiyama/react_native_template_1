@@ -3,7 +3,7 @@ import { TouchableHighlight, View } from "react-native";
 import { commons, types } from "./style";
 
 export default ({
-  isAvtive = true,
+  isActive = true,
   checked = false,
   style = {},
   type = "primary",  // primary secondary success danger warning info light dark

@@ -179,12 +179,45 @@ export default class extends React.Component {
                 onPress={() => this.setState({switch22Enabled: !this.state.switch22Enabled})}
                 enabled={this.state.switch22Enabled}
                 type="secondary"
-                disabledText="false"
+                disabledText="no"
                 enabledText="yes"
                 pill={false}
               />
               <Switch
                 onPress={() => this.setState({switch23Enabled: !this.state.switch23Enabled})}
+                enabled={this.state.switch23Enabled}
+                type="success"
+                disabledText="no"
+                enabledText="yes"
+                pill={false}
+              />
+            </FlexBox>
+          </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Disabled</Heading>
+            <FlexBox
+              flexWrap
+              alignItems="center"
+              justifyContent="center"
+              style={styles.badgeList}
+            >
+              <Switch
+                onPress={() => undefined}
+                enabled={true}
+                type="primary"
+                disabledText="no"
+                enabledText="yes"
+              />
+              <Switch
+                onPress={() => undefined}
+                enabled={this.state.switch22Enabled}
+                type="secondary"
+                pill={false}
+              />
+              <Switch
+                onPress={() => undefined}
                 enabled={this.state.switch23Enabled}
                 type="success"
                 disabledText="no"
