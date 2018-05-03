@@ -7,7 +7,7 @@ export default ({
   checked = false,
   style = {},
   type = "primary",  // primary secondary success danger warning info light dark
-  Component = isActive ? View : TouchableHighlight,
+  Component = isActive ? TouchableHighlight : View,
   ...props
 }) =>
   <Component
