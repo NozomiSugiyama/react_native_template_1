@@ -24,6 +24,7 @@ export default ({
     activeOpacity={1}
     style={{
       ...commons.host,
+      ...types.host[type],
       ...(
         pill ? {
           borderRadius: 160,

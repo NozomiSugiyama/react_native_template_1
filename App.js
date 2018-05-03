@@ -2,6 +2,7 @@ import React             from "react";
 import { Router, Scene } from "react-native-router-flux";
 import { Font }          from "expo";
 import TopPage           from "react_native_template_1/src/page/TopPage";
+import ColorListPage     from "react_native_template_1/src/page/ColorListPage";
 import {
   AlertComponentPage,
   AvatarComponentPage,
@@ -50,6 +51,11 @@ export default class extends React.Component {
             component={TopPage}
             title="top-page"
             // initial={true}
+          />
+          <Scene
+            key="colorListPage"
+            component={ColorListPage}
+            title="color-list-page"
           />
           <Scene 
             key="alertComponentPage"

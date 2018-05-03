@@ -59,36 +59,36 @@ export const sizes = {
 export const types = {
   button: {
     primary: {
-      backgroundColor: colors.primary.main,
-      borderColor: colors.primary.main,
+      backgroundColor: colors.primary[300],
+      borderColor: colors.primary[300],
     },
     secondary: {
-      backgroundColor: colors.secondary.main,
-      borderColor: colors.secondary.main,
+      backgroundColor: colors.secondary[300],
+      borderColor: colors.secondary[300],
     },
     success: {
-      backgroundColor: colors.success.main,
-      borderColor: colors.success.main,
+      backgroundColor: colors.success[300],
+      borderColor: colors.success[300],
     },
     danger: {
-      backgroundColor: colors.danger.main,
-      borderColor: colors.danger.main,
+      backgroundColor: colors.danger[300],
+      borderColor: colors.danger[300],
     },
     warning: {
-      backgroundColor: colors.warning.main,
-      borderColor: colors.warning.main,
+      backgroundColor: colors.warning[300],
+      borderColor: colors.warning[300],
     },
     info: {
-      backgroundColor: colors.info.main,
-      borderColor: colors.info.main,
+      backgroundColor: colors.info[300],
+      borderColor: colors.info[300],
     },
     light: {
-      backgroundColor: colors.light.main,
-      borderColor: colors.light.main,
+      backgroundColor: colors.light[300],
+      borderColor: colors.light[300],
     },
     dark:{
-      backgroundColor: colors.dark.main,
-      borderColor: colors.dark.main,
+      backgroundColor: colors.dark[300],
+      borderColor: colors.dark[300],
     }
   },
   text: {
@@ -119,38 +119,38 @@ export const types = {
   },
   outlineText: {
     primary: {
-      color: colors.primary.main,
+      color: colors.primary[300],
     },
     secondary: {
-      color: colors.secondary.main,
+      color: colors.secondary[300],
     },
     success: {
-      color: colors.success.main,
+      color: colors.success[300],
     },
     danger: {
-      color: colors.danger.main,
+      color: colors.danger[300],
     },
     warning: {
-      color: colors.warning.main,
+      color: colors.warning[300],
     },
     info: {
-      color: colors.info.main,
+      color: colors.info[300],
     },
     light: {
-      color: colors.light.main,
+      color: colors.light[300],
     },
     dark:{
-      color: colors.dark.main,
+      color: colors.dark[300],
     }
   },
   underlayColor: {
-    primary  : colors.primary.highlight,
-    secondary: colors.secondary.highlight,
-    success  : colors.success.highlight,
-    danger   : colors.danger.highlight,
-    warning  : colors.warning.highlight,
-    info     : colors.info.highlight,
-    light    : colors.light.highlight,
-    dark     : colors.dark.highlight,
+    primary  : colors.primary[400],
+    secondary: colors.secondary[400],
+    success  : colors.success[400],
+    danger   : colors.danger[400],
+    warning  : colors.warning[400],
+    info     : colors.info[400],
+    light    : colors.light[400],
+    dark     : colors.dark[400],
   }
 };

@@ -18,28 +18,28 @@ export const commons = {
 export const types = {
   view: {
     primary: {
-      backgroundColor: colors.primary.main
+      backgroundColor: colors.primary[300]
     },
     secondary: {
-      backgroundColor: colors.secondary.main
+      backgroundColor: colors.secondary[300]
     },
     success: {
-      backgroundColor: colors.success.main
+      backgroundColor: colors.success[300]
     },
     danger: {
-      backgroundColor: colors.danger.main
+      backgroundColor: colors.danger[300]
     },
     warning: {
-      backgroundColor: colors.warning.main
+      backgroundColor: colors.warning[300]
     },
     info: {
-      backgroundColor: colors.info.main
+      backgroundColor: colors.info[300]
     },
     light: {
-      backgroundColor: colors.light.main
+      backgroundColor: colors.light[100]
     },
     dark:{
-      backgroundColor: colors.dark.main
+      backgroundColor: colors.dark[300]
     }
   },
   text: {
@@ -69,13 +69,13 @@ export const types = {
     }
   },
   underlayColor: {
-    primary  : colors.primary.highlight,
-    secondary: colors.secondary.highlight,
-    success  : colors.success.highlight,
-    danger   : colors.danger.highlight,
-    warning  : colors.warning.highlight,
-    info     : colors.info.highlight,
-    light    : colors.light.highlight,
-    dark     : colors.dark.highlight,
+    primary  : colors.primary[400],
+    secondary: colors.secondary[400],
+    success  : colors.success[400],
+    danger   : colors.danger[400],
+    warning  : colors.warning[400],
+    info     : colors.info[400],
+    light    : colors.light[400],
+    dark     : colors.dark[400],
   }
 };

@@ -41,54 +41,54 @@ export const commons = {
 export const types = {
   host: {
     primary: {
-      borderColor: colors.primary.main,
+      borderColor: colors.primary[300],
     },
     secondary: {
-      borderColor: colors.secondary.main,
+      borderColor: colors.secondary[300],
     },
     success: {
-      borderColor: colors.success.main,
+      borderColor: colors.success[300],
     },
     danger: {
-      borderColor: colors.danger.main,
+      borderColor: colors.danger[300],
     },
     warning: {
-      borderColor: colors.warning.main,
+      borderColor: colors.warning[300],
     },
     info: {
-      borderColor: colors.info.main,
+      borderColor: colors.info[300],
     },
     light: {
-      borderColor: colors.light.main,
+      borderColor: colors.light[300],
     },
     dark:{
-      borderColor: colors.dark.main,
+      borderColor: colors.dark[300],
     }
   },
   pallet: {
     primary: {
-      backgroundColor: colors.primary.main,
+      backgroundColor: colors.primary[300],
     },
     secondary: {
-      backgroundColor: colors.secondary.main,
+      backgroundColor: colors.secondary[300],
     },
     success: {
-      backgroundColor: colors.success.main,
+      backgroundColor: colors.success[300],
     },
     danger: {
-      backgroundColor: colors.danger.main,
+      backgroundColor: colors.danger[300],
     },
     warning: {
-      backgroundColor: colors.warning.main,
+      backgroundColor: colors.warning[300],
     },
     info: {
-      backgroundColor: colors.info.main,
+      backgroundColor: colors.info[300],
     },
     light: {
-      backgroundColor: colors.light.main,
+      backgroundColor: colors.light[300],
     },
     dark:{
-      backgroundColor: colors.dark.main,
+      backgroundColor: colors.dark[300],
     }
   },
 };

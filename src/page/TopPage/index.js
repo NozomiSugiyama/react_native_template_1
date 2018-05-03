@@ -48,6 +48,7 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
             </ListGroup>
           </View>
+          <Button onPress={() => Actions.colorListPage()}>Colors</Button>
           <Switch
             onPress={() => this.setState({switch1Enabled: !this.state.switch1Enabled})}
             enabled={this.state.switch1Enabled}

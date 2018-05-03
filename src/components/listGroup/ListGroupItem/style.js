@@ -13,7 +13,7 @@ export const commons = {
   text: {},
   badge: {},
   activeView: {
-    backgroundColor: colors.primary.main
+    backgroundColor: colors.primary[300]
   },
   activeText: {
     color: "#FFF"
@@ -32,36 +32,36 @@ export const types = {
       borderTopColor: "#dfdfdf",
     },
     primary: {
-      backgroundColor: colors.primary.light,
-      borderTopColor: colors.primary.border,
+      backgroundColor: colors.primary[100],
+      borderTopColor: colors.primary[200],
     },
     secondary: {
-      backgroundColor: colors.secondary.light,
-      borderTopColor: colors.secondary.border,
+      backgroundColor: colors.secondary[100],
+      borderTopColor: colors.secondary[200],
     },
     success: {
-      backgroundColor: colors.success.light,
-      borderColor: colors.success.border,
+      backgroundColor: colors.success[100],
+      borderColor: colors.success[200],
     },
     danger: {
-      backgroundColor: colors.danger.light,
-      borderColor: colors.danger.border,
+      backgroundColor: colors.danger[100],
+      borderColor: colors.danger[200],
     },
     warning: {
-      backgroundColor: colors.warning.light,
-      borderColor: colors.warning.border,
+      backgroundColor: colors.warning[100],
+      borderColor: colors.warning[200],
     },
     info: {
-      backgroundColor: colors.info.light,
-      borderColor: colors.info.border,
+      backgroundColor: colors.info[100],
+      borderColor: colors.info[200],
     },
     light: {
-      backgroundColor: colors.light.light,
-      borderColor: colors.light.border,
+      backgroundColor: colors.light[100],
+      borderColor: colors.light[200],
     },
     dark:{
-      backgroundColor: colors.dark.light,
-      borderColor: colors.dark.border,
+      backgroundColor: colors.dark[100],
+      borderColor: colors.dark[200],
     }
   },
   text: {

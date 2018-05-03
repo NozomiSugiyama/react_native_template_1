@@ -58,105 +58,97 @@ export const commons = {
 export const types = {
   host: {
     primary: {
-      backgroundColor: colors.primary.light,
-      borderColor: colors.primary.border,
+      borderColor: colors.primary[200],
     },
     secondary: {
-      backgroundColor: colors.secondary.light,
-      borderColor: colors.secondary.border,
+      borderColor: colors.secondary[200],
     },
     success: {
-      backgroundColor: colors.success.light,
-      borderColor: colors.success.border,
+      borderColor: colors.success[200],
     },
     danger: {
-      backgroundColor: colors.danger.light,
-      borderColor: colors.danger.border,
+      borderColor: colors.danger[200],
     },
     warning: {
-      backgroundColor: colors.warning.light,
-      borderColor: colors.warning.border,
+      borderColor: colors.warning[200],
     },
     info: {
-      backgroundColor: colors.info.light,
-      borderColor: colors.info.border,
+      borderColor: colors.info[200],
     },
     light: {
-      backgroundColor: colors.light.light,
-      borderColor: colors.light.border,
+      borderColor: colors.light[100],
     },
     dark:{
-      backgroundColor: colors.dark.light,
-      borderColor: colors.dark.border,
+      borderColor: colors.dark[200],
     }
 
   },
   disabledPallet: {
     primary: {
-      backgroundColor: colors.primary.light,
-      borderColor: colors.primary.border,
+      backgroundColor: colors.primary[100],
+      borderColor: colors.primary[200],
     },
     secondary: {
-      backgroundColor: colors.secondary.light,
-      borderColor: colors.secondary.border,
+      backgroundColor: colors.secondary[100],
+      borderColor: colors.secondary[200],
     },
     success: {
-      backgroundColor: colors.success.light,
-      borderColor: colors.success.border,
+      backgroundColor: colors.success[100],
+      borderColor: colors.success[200],
     },
     danger: {
-      backgroundColor: colors.danger.light,
-      borderColor: colors.danger.border,
+      backgroundColor: colors.danger[100],
+      borderColor: colors.danger[200],
     },
     warning: {
-      backgroundColor: colors.warning.light,
-      borderColor: colors.warning.border,
+      backgroundColor: colors.warning[100],
+      borderColor: colors.warning[200],
     },
     info: {
-      backgroundColor: colors.info.light,
-      borderColor: colors.info.border,
+      backgroundColor: colors.info[100],
+      borderColor: colors.info[200],
     },
     light: {
-      backgroundColor: colors.light.light,
-      borderColor: colors.light.border,
+      backgroundColor: colors.light[100],
+      borderColor: colors.light[100],
     },
     dark:{
-      backgroundColor: colors.dark.light,
-      borderColor: colors.dark.border,
+      backgroundColor: colors.dark[100],
+      borderColor: colors.dark[200],
     }
   },
   enabledPallet: {
     primary: {
-      backgroundColor: colors.primary.light,
-      borderColor: colors.primary.border,
+      backgroundColor: colors.primary[100],
+      borderColor: colors.primary[200],
     },
     secondary: {
-      backgroundColor: colors.secondary.light,
-      borderColor: colors.secondary.border,
+      backgroundColor: colors.secondary[100],
+      borderColor: colors.secondary[200],
     },
     success: {
-      backgroundColor: colors.success.light,
-      borderColor: colors.success.border,
+      backgroundColor: colors.success[100],
+      borderColor: colors.success[200],
     },
     danger: {
-      backgroundColor: colors.danger.light,
-      borderColor: colors.danger.border,
+      backgroundColor: colors.danger[100],
+      borderColor: colors.danger[200],
     },
     warning: {
-      backgroundColor: colors.warning.light,
-      borderColor: colors.warning.border,
+      backgroundColor: colors.warning[100],
+      borderColor: colors.warning[200],
     },
     info: {
-      backgroundColor: colors.info.light,
-      borderColor: colors.info.border,
+      backgroundColor: colors.info[100],
+      borderColor: colors.info[200],
     },
     light: {
-      backgroundColor: colors.light.light,
-      borderColor: colors.light.border,
+      backgroundColor: colors.light[100],
+      borderColor: colors.light[100],
     },
     dark:{
-      backgroundColor: colors.dark.light,
-      borderColor: colors.dark.border,
+      backgroundColor: colors.dark[100],
+      borderColor: colors.dark[200],
     }
   },
   text: {
@@ -179,7 +171,7 @@ export const types = {
       color: colors.info.text
     },
     light: {
-      color: colors.light.text
+      color: colors.light[100].text
     },
     dark:{
       color: colors.dark.text
