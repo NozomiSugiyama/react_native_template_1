@@ -11,7 +11,8 @@ import {
   ButtonGroupComponentPage,
   CheckboxComponentPage,
   HeadingComponentPage,
-  ListGroupComponentPage
+  ListGroupComponentPage,
+  SwitchComponentPage
 } from "react_native_template_1/src/page/components";
 
 export default class extends React.Component {
@@ -81,13 +82,11 @@ export default class extends React.Component {
             key="buttonGroupComponentPage"
             component={ButtonGroupComponentPage}
             title="button-group-component-page"
-            // initial={true}
           />
           <Scene 
             key="CheckboxComponentPage"
             component={CheckboxComponentPage}
             title="checkbox-component-page"
-            // initial={true}
           />
           <Scene 
             key="headingComponentPage"
@@ -98,6 +97,12 @@ export default class extends React.Component {
             key="listGroupComponentPage"
             component={ListGroupComponentPage}
             title="list-group-component-page"
+          />
+          <Scene 
+            key="switchComponentPage"
+            component={SwitchComponentPage}
+            title="switch-component-page"
+            initial={true}
           />
         </Scene>
       </Router>

@@ -56,7 +56,7 @@ export default ({
       <View
         style={{
           ...commons.pallet,
-          ...commons.disabledPallet
+          ...types.enabledPallet[type]
         }}
       >
         <Text
@@ -66,7 +66,7 @@ export default ({
             ...textStyle
           }}
         >
-          {disabledText}
+          {enabledText}
         </Text>
       </View>
       <View
@@ -83,8 +83,7 @@ export default ({
       <View
         style={{
           ...commons.pallet,
-          ...commons.enabledPallet,
-          // ...types.enabledPallet[type]
+          ...types.disabledPallet[type],
         }}
       >
         <Text
@@ -94,7 +93,7 @@ export default ({
             ...textStyle
           }}
         >
-          {enabledText}
+          {disabledText}
         </Text>
       </View>
     </View>

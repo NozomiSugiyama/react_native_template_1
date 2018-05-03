@@ -2,7 +2,10 @@ import { colors } from "config";
 
 export const commons = {
   host: {
-    marginBottom: 16,
+    marginLeft: 16,
+    marginRight: 16,
+    marginTop: 8,
+    marginBottom: 8,
     borderTopWidth: 6,
     borderBottomWidth: 6,
     borderLeftWidth: 2,
@@ -51,130 +54,114 @@ export const commons = {
     left: -( 11 + 2 )
   },
   selectorEnabled: {
-    left: - (64 - 11 - 2)
+    left: - ( 64 - 11 - 2 )
   }
 }
 
 export const types = {
   host: {
     primary: {
-      borderColor: colors.primary[200],
+      borderColor: colors.primary[500],
     },
     secondary: {
-      borderColor: colors.secondary[200],
+      borderColor: colors.secondary[500],
     },
     success: {
-      borderColor: colors.success[200],
+      borderColor: colors.success[500],
     },
     danger: {
-      borderColor: colors.danger[200],
+      borderColor: colors.danger[500],
     },
     warning: {
-      borderColor: colors.warning[200],
+      borderColor: colors.warning[500],
     },
     info: {
-      borderColor: colors.info[200],
+      borderColor: colors.info[500],
     },
     light: {
-      borderColor: colors.light[100],
+      borderColor: colors.light[500],
     },
     dark:{
-      borderColor: colors.dark[200],
+      borderColor: colors.dark[500],
     }
 
-  },
-  disabledPallet: {
-    primary: {
-      backgroundColor: colors.primary[100],
-      borderColor: colors.primary[200],
-    },
-    secondary: {
-      backgroundColor: colors.secondary[100],
-      borderColor: colors.secondary[200],
-    },
-    success: {
-      backgroundColor: colors.success[100],
-      borderColor: colors.success[200],
-    },
-    danger: {
-      backgroundColor: colors.danger[100],
-      borderColor: colors.danger[200],
-    },
-    warning: {
-      backgroundColor: colors.warning[100],
-      borderColor: colors.warning[200],
-    },
-    info: {
-      backgroundColor: colors.info[100],
-      borderColor: colors.info[200],
-    },
-    light: {
-      backgroundColor: colors.light[100],
-      borderColor: colors.light[100],
-    },
-    dark:{
-      backgroundColor: colors.dark[100],
-      borderColor: colors.dark[200],
-    }
   },
   enabledPallet: {
     primary: {
       backgroundColor: colors.primary[100],
-      borderColor: colors.primary[200],
     },
     secondary: {
       backgroundColor: colors.secondary[100],
-      borderColor: colors.secondary[200],
     },
     success: {
       backgroundColor: colors.success[100],
-      borderColor: colors.success[200],
     },
     danger: {
       backgroundColor: colors.danger[100],
-      borderColor: colors.danger[200],
     },
     warning: {
       backgroundColor: colors.warning[100],
-      borderColor: colors.warning[200],
     },
     info: {
       backgroundColor: colors.info[100],
-      borderColor: colors.info[200],
     },
     light: {
       backgroundColor: colors.light[100],
-      borderColor: colors.light[100],
     },
     dark:{
       backgroundColor: colors.dark[100],
-      borderColor: colors.dark[200],
+    }
+  },
+  disabledPallet: {
+    primary: {
+      backgroundColor: colors.primary[300],
+    },
+    secondary: {
+      backgroundColor: colors.secondary[300],
+    },
+    success: {
+      backgroundColor: colors.success[300],
+    },
+    danger: {
+      backgroundColor: colors.danger[300],
+    },
+    warning: {
+      backgroundColor: colors.warning[300],
+    },
+    info: {
+      backgroundColor: colors.info[300],
+    },
+    light: {
+      backgroundColor: colors.light[300],
+    },
+    dark:{
+      backgroundColor: colors.dark[300],
     }
   },
   text: {
     primary: {
-      color: colors.primary.text
+      color: "#fafbfd"
     },
     secondary: {
-      color: colors.secondary.text
+      color: "#fafbfd"
     },
     success: {
-      color: colors.success.text
+      color: "#fafbfd"
     },
     danger: {
-      color: colors.danger.text
+      color: "#fafbfd"
     },
     warning: {
-      color: colors.warning.text
+      color: "#fafbfd"
     },
     info: {
-      color: colors.info.text
+      color: "#fafbfd"
     },
     light: {
-      color: colors.light[100].text
+      color: "#fafbfd"
     },
     dark:{
-      color: colors.dark.text
+      color: "#fafbfd"
     }
   }
 };

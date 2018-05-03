@@ -1,11 +1,3 @@
-
-// <ListGroupItem badge500="100" type="100" style={{backgroundColor: colors.primary.100}} />
-// <ListGroupItem badge500="200" type="100" style={{backgroundColor: colors.primary.200}} />
-// <ListGroupItem badge500="300" type="100" style={{backgroundColor: colors.primary.300}} />
-// <ListGroupItem badge500="400" type="100" style={{backgroundColor: colors.primary.400}} />
-// <ListGroupItem badge500="500" type="100" style={{backgroundColor: colors.primary.500 }} />
-
-
 export default {
   primary: {
     300: "#007bff",

@@ -66,28 +66,28 @@ export const types = {
   },
   text: {
     primary: {
-      color: colors.primary.text
+      color: colors.primary[500]
     },
     secondary: {
-      color: colors.secondary.text
+      color: colors.secondary[500]
     },
     success: {
-      color: colors.success.text
+      color: colors.success[500]
     },
     danger: {
-      color: colors.danger.text
+      color: colors.danger[500]
     },
     warning: {
-      color: colors.warning.text
+      color: colors.warning[500]
     },
     info: {
-      color: colors.info.text
+      color: colors.info[500]
     },
     light: {
-      color: colors.light.text
+      color: colors.light[500]
     },
     dark:{
-      color: colors.dark.text
+      color: colors.dark[500]
     }
   },
   underlayColor: {

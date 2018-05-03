@@ -46,19 +46,10 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.CheckboxComponentPage()}>Checkbox</ListGroupItem>
               <ListGroupItem onPress={() => Actions.headingComponentPage()}>Heading</ListGroupItem>
               <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
             </ListGroup>
           </View>
           <Button onPress={() => Actions.colorListPage()}>Colors</Button>
-          <Switch
-            onPress={() => this.setState({switch1Enabled: !this.state.switch1Enabled})}
-            enabled={this.state.switch1Enabled}
-          />
-          <Switch 
-            disabledText="off"
-            enabledText="on"
-            onPress={() => this.setState({switch2Enabled: !this.state.switch2Enabled})}
-            enabled={this.state.switch2Enabled}
-          />
         </FlexBox>
       </Page>
     );
