@@ -64,14 +64,14 @@ export default class extends React.Component {
               justifyContent="center"
               style={styles.badgeList}
             >
-              <Checkbox type="primary"   disabled onPress={() => this.setState({checkbox11: !this.state.checkbox11})} checked={this.state.checkbox11} />
-              <Checkbox type="secondary" disabled onPress={() => this.setState({checkbox12: !this.state.checkbox12})} checked={this.state.checkbox12} />
-              <Checkbox type="success"   disabled onPress={() => this.setState({checkbox13: !this.state.checkbox13})} checked={this.state.checkbox13} />
-              <Checkbox type="danger"    disabled onPress={() => this.setState({checkbox14: !this.state.checkbox14})} checked={this.state.checkbox14} />
-              <Checkbox type="warning"   disabled onPress={() => this.setState({checkbox15: !this.state.checkbox15})} checked={this.state.checkbox15} />
-              <Checkbox type="info"      disabled onPress={() => this.setState({checkbox16: !this.state.checkbox16})} checked={this.state.checkbox16} />
-              <Checkbox type="light"     disabled onPress={() => this.setState({checkbox17: !this.state.checkbox17})} checked={this.state.checkbox17} />
-              <Checkbox type="dark"      disabled onPress={() => this.setState({checkbox18: !this.state.checkbox18})} checked={this.state.checkbox18} />
+              <Checkbox type="primary"   isAvtive={false} onPress={() => this.setState({checkbox11: !this.state.checkbox11})} checked={this.state.checkbox11} />
+              <Checkbox type="secondary" isAvtive={false} onPress={() => this.setState({checkbox12: !this.state.checkbox12})} checked={this.state.checkbox12} />
+              <Checkbox type="success"   isAvtive={false} onPress={() => this.setState({checkbox13: !this.state.checkbox13})} checked={this.state.checkbox13} />
+              <Checkbox type="danger"    isAvtive={false} onPress={() => this.setState({checkbox14: !this.state.checkbox14})} checked={this.state.checkbox14} />
+              <Checkbox type="warning"   isAvtive={false} onPress={() => this.setState({checkbox15: !this.state.checkbox15})} checked={this.state.checkbox15} />
+              <Checkbox type="info"      isAvtive={false} onPress={() => this.setState({checkbox16: !this.state.checkbox16})} checked={this.state.checkbox16} />
+              <Checkbox type="light"     isAvtive={false} onPress={() => this.setState({checkbox17: !this.state.checkbox17})} checked={this.state.checkbox17} />
+              <Checkbox type="dark"      isAvtive={false} onPress={() => this.setState({checkbox18: !this.state.checkbox18})} checked={this.state.checkbox18} />
             </FlexBox>
           </View>
         </View>

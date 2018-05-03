@@ -3,11 +3,11 @@ import { TouchableHighlight, View } from "react-native";
 import { commons, types } from "./style";
 
 export default ({
-  disabled = false,
+  isAvtive = true,
   checked = false,
   style = {},
   type = "primary",  // primary secondary success danger warning info light dark
-  Component = disabled ? View : TouchableHighlight,
+  Component = isAvtive ? View : TouchableHighlight,
   ...props
 }) =>
   <Component
@@ -15,8 +15,8 @@ export default ({
       ...commons.host,
       ...types.host[type],
       ...(
-        disabled ? commons.disabledHost 
-      :            {}
+        !isAvtive ? commons.disabledHost 
+      :             {}
       ),
       ...style
     }}
@@ -27,11 +27,11 @@ export default ({
         ...commons.pallet,
         ...types.pallet[type],
         ...(
-          disabled ? commons.disabledPallet 
+          !isAvtive ? commons.disabledPallet 
         :            {}
         ),
     　   ...(
-          checked || disabled ? { opacity: 1 }
+          checked || !isAvtive ? { opacity: 1 }
         :                       { opacity: 0 }
         )
       }}
@@ -40,7 +40,7 @@ export default ({
         style={{
           ...commons.checkMark,
           ...(
-            type == "light" && !disabled ? { borderColor: "#333" }
+            type == "light" && isAvtive ? { borderColor: "#333" }
           :                                {}
           ),
       　   ...(
