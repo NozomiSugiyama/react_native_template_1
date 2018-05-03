@@ -32,7 +32,7 @@ export default ({
         ),
     　   ...(
           checked || !isAvtive ? { opacity: 1 }
-        :                       { opacity: 0 }
+        :                        { opacity: 0 }
         )
       }}
     >
