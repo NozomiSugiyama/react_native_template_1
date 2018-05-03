@@ -3,59 +3,159 @@ import { colors } from "config";
 export const commons = {
   host: {
     marginBottom: 16,
-    borderRadius: 4,
-    minHeight: 24,
+    borderTopWidth: 6,
+    borderBottomWidth: 6,
+    borderLeftWidth: 2,
+    borderRightWidth: 2,
+    borderColor: "red",
+    borderRadius: 24 / 2,
+    minHeight: 28,
     minWidth: 64,
     maxHeight: 24,
     maxWidth: 64,
     overflow: "hidden",
+    zIndex: 3
+  },
+  innerItem: {
+    minWidth: 126,
     flex: 1,
     flexDirection: "row",
     flexWrap: "nowrap"
   },
   text: {},
-  disabledView: {
-    backgroundColor: "#dfe2e7"
+  pallet: {
+    maxWidth: 64 - 11,
+    zIndex: 0,
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  selectorWrapper: {
+    maxWidth: 0,
+    overflow: "visible",
+    zIndex: 1,
   },
   selector: {
-    width: 24,
-    height: 24,
-    backgroundColor: "green"
+    minWidth: 20,
+    minHeight: 20,
+    backgroundColor: "green",
+    borderRadius: 20 / 2,
+    position: "absolute",
+    left: -11,
+    zIndex: 1,
+    top: -2
+  },
+  selectorDisabled: {
+    left: -( 11 + 2 )
+  },
+  selectorEnabled: {
+    left: - (64 - 11 - 2)
   }
 }
 
 export const types = {
-  view: {
+  host: {
     primary: {
-      backgroundColor: colors.primary.deep,
+      backgroundColor: colors.primary.light,
       borderColor: colors.primary.border,
     },
     secondary: {
-      backgroundColor: colors.secondary.deep,
+      backgroundColor: colors.secondary.light,
       borderColor: colors.secondary.border,
     },
     success: {
-      backgroundColor: colors.success.deep,
+      backgroundColor: colors.success.light,
       borderColor: colors.success.border,
     },
     danger: {
-      backgroundColor: colors.danger.deep,
+      backgroundColor: colors.danger.light,
       borderColor: colors.danger.border,
     },
     warning: {
-      backgroundColor: colors.warning.deep,
+      backgroundColor: colors.warning.light,
       borderColor: colors.warning.border,
     },
     info: {
-      backgroundColor: colors.info.deep,
+      backgroundColor: colors.info.light,
       borderColor: colors.info.border,
     },
     light: {
-      backgroundColor: colors.light.deep,
+      backgroundColor: colors.light.light,
       borderColor: colors.light.border,
     },
     dark:{
-      backgroundColor: colors.dark.deep,
+      backgroundColor: colors.dark.light,
+      borderColor: colors.dark.border,
+    }
+
+  },
+  disabledPallet: {
+    primary: {
+      backgroundColor: colors.primary.light,
+      borderColor: colors.primary.border,
+    },
+    secondary: {
+      backgroundColor: colors.secondary.light,
+      borderColor: colors.secondary.border,
+    },
+    success: {
+      backgroundColor: colors.success.light,
+      borderColor: colors.success.border,
+    },
+    danger: {
+      backgroundColor: colors.danger.light,
+      borderColor: colors.danger.border,
+    },
+    warning: {
+      backgroundColor: colors.warning.light,
+      borderColor: colors.warning.border,
+    },
+    info: {
+      backgroundColor: colors.info.light,
+      borderColor: colors.info.border,
+    },
+    light: {
+      backgroundColor: colors.light.light,
+      borderColor: colors.light.border,
+    },
+    dark:{
+      backgroundColor: colors.dark.light,
+      borderColor: colors.dark.border,
+    }
+  },
+  enabledPallet: {
+    primary: {
+      backgroundColor: colors.primary.light,
+      borderColor: colors.primary.border,
+    },
+    secondary: {
+      backgroundColor: colors.secondary.light,
+      borderColor: colors.secondary.border,
+    },
+    success: {
+      backgroundColor: colors.success.light,
+      borderColor: colors.success.border,
+    },
+    danger: {
+      backgroundColor: colors.danger.light,
+      borderColor: colors.danger.border,
+    },
+    warning: {
+      backgroundColor: colors.warning.light,
+      borderColor: colors.warning.border,
+    },
+    info: {
+      backgroundColor: colors.info.light,
+      borderColor: colors.info.border,
+    },
+    light: {
+      backgroundColor: colors.light.light,
+      borderColor: colors.light.border,
+    },
+    dark:{
+      backgroundColor: colors.dark.light,
       borderColor: colors.dark.border,
     }
   },

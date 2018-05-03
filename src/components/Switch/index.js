@@ -1,13 +1,20 @@
 import React from "react";
-import { TouchableOpacity, Text, View } from "react-native";
+import { NativeModules, LayoutAnimation, Animated, TouchableOpacity, Text, View } from "react-native";
 import { commons, types } from "./style";
 
+const { UIManager } = NativeModules;
+
+UIManager.setLayoutAnimationEnabledExperimental &&
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+
 export default ({
+  actived= false,
   type = "info", // primary secondary success danger warning info light dark
   disabledText,
   enabledText,
   children,
   enabled = false,
+  onPress = () => undefined,
   pill = true,
   textStyle = {},
   style = {},
@@ -25,46 +32,69 @@ export default ({
         }
              : {}
       ),
-      backgroundColor: enabled ? "blue" : "red",
       ...style
+    }}
+    onPress={() => {
+
+      LayoutAnimation.configureNext({
+        duration: 30,
+        update: {
+          type: LayoutAnimation.Types.easeInEaseOut,
+        }
+      });
+      onPress()
     }}
     {...props}
   >
     <View
       style={{
-        ...commons.disabledView
+        ...commons.innerItem,
+        ...(enabled ? commons.selectorEnabled: commons.selectorDisabled)
       }}
     >
-      <Text
+      <View
         style={{
-          ...commons.text,
-          ...types.text[type],
-          ...textStyle
+          ...commons.pallet,
+          ...commons.disabledPallet
         }}
       >
-        {disabledText}
-      </Text>
-    </View>
-    <View
-      style={{
-        ...commons.selector
-      }}
-    >
-
-    </View>
-    <View
-      style={{
-        ...commons.host
-      }}
-    >
-      <Text
+        <Text
+          style={{
+            ...commons.text,
+            ...types.text[type],
+            ...textStyle
+          }}
+        >
+          {disabledText}
+        </Text>
+      </View>
+      <View
         style={{
-          ...commons.text,
-          ...types.text[type],
-          ...textStyle
+          ...commons.selectorWrapper
         }}
       >
-        {enabledText}
-      </Text>
+        <View
+          style={{
+            ...commons.selector,
+          }}
+        />
+      </View>
+      <View
+        style={{
+          ...commons.pallet,
+          ...commons.enabledPallet,
+          // ...types.enabledPallet[type]
+        }}
+      >
+        <Text
+          style={{
+            ...commons.text,
+            ...types.text[type],
+            ...textStyle
+          }}
+        >
+          {enabledText}
+        </Text>
+      </View>
     </View>
   </TouchableOpacity>

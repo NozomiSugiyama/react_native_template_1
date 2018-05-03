@@ -17,35 +17,35 @@ export const commons = {
 export const types = {
   view: {
     primary: {
-      backgroundColor: colors.primary.deep,
+      backgroundColor: colors.primary.light,
       borderColor: colors.primary.border,
     },
     secondary: {
-      backgroundColor: colors.secondary.deep,
+      backgroundColor: colors.secondary.light,
       borderColor: colors.secondary.border,
     },
     success: {
-      backgroundColor: colors.success.deep,
+      backgroundColor: colors.success.light,
       borderColor: colors.success.border,
     },
     danger: {
-      backgroundColor: colors.danger.deep,
+      backgroundColor: colors.danger.light,
       borderColor: colors.danger.border,
     },
     warning: {
-      backgroundColor: colors.warning.deep,
+      backgroundColor: colors.warning.light,
       borderColor: colors.warning.border,
     },
     info: {
-      backgroundColor: colors.info.deep,
+      backgroundColor: colors.info.light,
       borderColor: colors.info.border,
     },
     light: {
-      backgroundColor: colors.light.deep,
+      backgroundColor: colors.light.light,
       borderColor: colors.light.border,
     },
     dark:{
-      backgroundColor: colors.dark.deep,
+      backgroundColor: colors.dark.light,
       borderColor: colors.dark.border,
     }
   },

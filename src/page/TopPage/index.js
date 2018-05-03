@@ -53,8 +53,8 @@ export default class extends React.Component {
             enabled={this.state.switch1Enabled}
           />
           <Switch 
-            disabledText="no"
-            enabledText="yes"
+            disabledText="off"
+            enabledText="on"
             onPress={() => this.setState({switch2Enabled: !this.state.switch2Enabled})}
             enabled={this.state.switch2Enabled}
           />
