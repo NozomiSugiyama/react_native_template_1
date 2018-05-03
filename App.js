@@ -10,6 +10,7 @@ import {
   ButtonComponentPage,
   ButtonGroupComponentPage,
   CheckboxComponentPage,
+  DropdownComponentPage,
   HeadingComponentPage,
   ListGroupComponentPage,
   SwitchComponentPage
@@ -84,9 +85,15 @@ export default class extends React.Component {
             title="button-group-component-page"
           />
           <Scene 
-            key="CheckboxComponentPage"
+            key="checkboxComponentPage"
             component={CheckboxComponentPage}
             title="checkbox-component-page"
+          />
+          <Scene 
+            key="dropdownComponentPage"
+            component={DropdownComponentPage}
+            title="dropdown-component-page"
+            initial={true}
           />
           <Scene 
             key="headingComponentPage"
