@@ -7,7 +7,7 @@ export default ({
   checked = false,
   style = {},
   type = "primary",  // primary secondary success danger warning info light dark
-  Component = isAvtive ? View : TouchableHighlight,
+  Component = isActive ? View : TouchableHighlight,
   ...props
 }) =>
   <Component
@@ -15,7 +15,7 @@ export default ({
       ...commons.host,
       ...types.host[type],
       ...(
-        !isAvtive ? commons.disabledHost 
+        !isActive ? commons.disabledHost 
       :             {}
       ),
       ...style
@@ -27,11 +27,11 @@ export default ({
         ...commons.pallet,
         ...types.pallet[type],
         ...(
-          !isAvtive ? commons.disabledPallet 
+          !isActive ? commons.disabledPallet 
         :            {}
         ),
     　   ...(
-          checked || !isAvtive ? { opacity: 1 }
+          checked || !isActive ? { opacity: 1 }
         :                        { opacity: 0 }
         )
       }}
@@ -40,7 +40,7 @@ export default ({
         style={{
           ...commons.checkMark,
           ...(
-            type == "light" && isAvtive ? { borderColor: "#333" }
+            type == "light" && isActive ? { borderColor: "#333" }
           :                                {}
           ),
       　   ...(
