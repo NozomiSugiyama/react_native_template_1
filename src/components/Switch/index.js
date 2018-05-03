@@ -9,10 +9,11 @@ UIManager.setLayoutAnimationEnabledExperimental &&
 
 export default ({
   actived= false,
-  type = "info", // primary secondary success danger warning info light dark
+  type = "primary", // primary secondary success danger warning info light dark
   disabledText,
   enabledText,
   children,
+  disabled = false,
   enabled = false,
   onPress = () => undefined,
   pill = true,
@@ -24,15 +25,13 @@ export default ({
     activeOpacity={1}
     style={{
       ...commons.host,
-      ...types.host[type],
       ...(
         pill ? {
           borderRadius: 160,
-          paddingRight: 9.6,
-          paddingLeft: 9.6
         }
              : {}
       ),
+      ...(enabled ? commons.enabledHost: commons.disabledHost),
       ...style
     }}
     onPress={() => {
@@ -55,15 +54,15 @@ export default ({
     >
       <View
         style={{
-          ...commons.pallet,
-          ...types.enabledPallet[type]
+          ...commons.pallet
         }}
       >
         <Text
           style={{
             ...commons.text,
-            ...types.text[type],
-            ...textStyle
+            ...commons.enabledText,
+            ...types.enabledText[type],
+            ...textStyle,
           }}
         >
           {enabledText}
@@ -77,19 +76,27 @@ export default ({
         <View
           style={{
             ...commons.selector,
+            ...(
+              !pill ? {
+                borderRadius: 7,
+                paddingRight: 9.6,
+                paddingLeft: 9.6
+              }
+                   : {}
+            ),
+            ...types.selector[type]
           }}
         />
       </View>
       <View
         style={{
           ...commons.pallet,
-          ...types.disabledPallet[type],
         }}
       >
         <Text
           style={{
             ...commons.text,
-            ...types.text[type],
+            ...commons.disabledText,
             ...textStyle
           }}
         >

@@ -16,7 +16,19 @@ export default class extends React.Component {
       switch6Enabled: true,
       switch7Enabled: true,
       switch7Enabled: true,
+      switch8Enabled: true,
       switch11Enabled: true,
+      switch12Enabled: true,
+      switch13Enabled: true,
+      switch14Enabled: true,
+      switch15Enabled: true,
+      switch16Enabled: true,
+      switch17Enabled: true,
+      switch18Enabled: true,
+      switch21Enabled: true,
+      switch22Enabled: true,
+      switch23Enabled: true,
+      switch24Enabled: true,
     })
   }
   render() {
@@ -25,7 +37,7 @@ export default class extends React.Component {
         style={styles.host}
         {...this.props}
       >
-        <Heading>Checkboxes</Heading>
+        <Heading>Switches</Heading>
         <View>
           <View
             style={styles.content}
@@ -89,11 +101,95 @@ export default class extends React.Component {
               justifyContent="center"
               style={styles.badgeList}
             >
-              <Switch 
-                disabledText="off"
-                enabledText="on"
+              <Switch
                 onPress={() => this.setState({switch11Enabled: !this.state.switch11Enabled})}
                 enabled={this.state.switch11Enabled}
+                type="primary"
+                disabledText="no"
+                enabledText="yes"
+              />
+              <Switch
+                onPress={() => this.setState({switch12Enabled: !this.state.switch12Enabled})}
+                enabled={this.state.switch12Enabled}
+                type="secondary"
+                disabledText="false"
+                enabledText="true"
+              />
+              <Switch
+                onPress={() => this.setState({switch13Enabled: !this.state.switch13Enabled})}
+                enabled={this.state.switch13Enabled}
+                type="success"
+                disabledText="hide"
+                enabledText="view"
+              />
+              <Switch
+                onPress={() => this.setState({switch14Enabled: !this.state.switch14Enabled})}
+                enabled={this.state.switch14Enabled}
+                type="danger"
+                disabledText="off"
+                enabledText="on"
+              />
+              <Switch
+                onPress={() => this.setState({switch15Enabled: !this.state.switch15Enabled})}
+                enabled={this.state.switch15Enabled}
+                type="warning"
+                disabledText="0"
+                enabledText="1"
+              />
+              <Switch
+                onPress={() => this.setState({switch16Enabled: !this.state.switch16Enabled})}
+                enabled={this.state.switch16Enabled}
+                type="info"
+                disabledText="✖︎"
+                enabledText="⚪︎"
+              />
+              <Switch
+                onPress={() => this.setState({switch17Enabled: !this.state.switch17Enabled})}
+                enabled={this.state.switch17Enabled}
+                type="light"
+                disabledText="NO"
+                enabledText="YES"
+              />
+              <Switch
+                onPress={() => this.setState({switch18Enabled: !this.state.switch18Enabled})}
+                enabled={this.state.switch18Enabled}
+                type="dark"
+                disabledText="back"
+                enabledText="go"
+              />
+            </FlexBox>
+          </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Square Switch</Heading>
+            <FlexBox
+              flexWrap
+              alignItems="center"
+              justifyContent="center"
+              style={styles.badgeList}
+            >
+              <Switch
+                onPress={() => this.setState({switch21Enabled: !this.state.switch21Enabled})}
+                enabled={this.state.switch21Enabled}
+                type="primary"
+                pill={false}
+              />
+              <Switch
+                onPress={() => this.setState({switch22Enabled: !this.state.switch22Enabled})}
+                enabled={this.state.switch22Enabled}
+                type="secondary"
+                disabledText="false"
+                enabledText="yes"
+                pill={false}
+              />
+              <Switch
+                onPress={() => this.setState({switch23Enabled: !this.state.switch23Enabled})}
+                enabled={this.state.switch23Enabled}
+                type="success"
+                disabledText="no"
+                enabledText="yes"
+                pill={false}
               />
             </FlexBox>
           </View>
