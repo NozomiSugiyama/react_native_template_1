@@ -1,8 +1,9 @@
 import React             from "react";
 import { Router, Scene } from "react-native-router-flux";
 import { Font }          from "expo";
-import TopPage           from "react_native_template_1/src/page/TopPage";
+import ApiClientPage     from "react_native_template_1/src/page/ApiClientPage";
 import ColorListPage     from "react_native_template_1/src/page/ColorListPage";
+import TopPage           from "react_native_template_1/src/page/TopPage";
 import {
   AlertComponentPage,
   AvatarComponentPage,
@@ -55,6 +56,11 @@ export default class extends React.Component {
             // initial={true}
           />
           <Scene
+            key="apiClientPage"
+            component={ApiClientPage}
+            title="api-client-page"
+          />
+          <Scene
             key="colorListPage"
             component={ColorListPage}
             title="color-list-page"
@@ -93,7 +99,7 @@ export default class extends React.Component {
             key="dropdownComponentPage"
             component={DropdownComponentPage}
             title="dropdown-component-page"
-            initial={true}
+            // initial={true}
           />
           <Scene 
             key="headingComponentPage"

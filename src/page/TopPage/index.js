@@ -32,7 +32,7 @@ export default class extends React.Component {
             <Heading size="large">template 1</Heading>
           </View>
           <View>
-            <Heading size="small" style={{alignSelf: "flex-start"}}>components</Heading>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>Components</Heading>
             <ListGroup
               style={{
                 width: 300
@@ -49,8 +49,10 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
               <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
             </ListGroup>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
+            <Button onPress={() => Actions.colorListPage()}>Colors</Button>
+            <Button onPress={() => Actions.apiClientPage()}>API Client</Button>
           </View>
-          <Button onPress={() => Actions.colorListPage()}>Colors</Button>
         </FlexBox>
       </Page>
     );
