@@ -1,7 +1,8 @@
 import React from "react"
 import * as postApi from "react_native_template_1/src/api/jsonplaceholderApi/posts"
-import { Text, View, Linking } from "react-native"
+import { Modal, Text, View, Linking } from "react-native"
 import { Alert, Button, Heading, Page } from "react_native_template_1/src/components"
+import { ListGroup, ListGroupItem } from "react_native_template_1/src/components/listGroup"
 import { colors } from "config"
 
 import styles from "./styles"
@@ -10,7 +11,8 @@ export default class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      posts: []
+      posts: [],
+      modalVisible: false
     })
   }
 
@@ -46,15 +48,49 @@ export default class extends React.Component {
           >
             test
           </Button>
+          <ListGroup>
           {this.state.posts.map((x, i) => 
-            <View
+            <ListGroupItem
+              badgeText={x.userId}
               key={i}
+              onPress={() => this.setState({modalVisible: true})}
             >
-              <Text>{x.userId}</Text>
-              <Text>{x.title}</Text>
-              <Text>{x.body}</Text>
-            </View>
+              {x.title}
+            </ListGroupItem>
           )}
+          </ListGroup>
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={this.state.modalVisible}
+            onRequestClose={() => {
+              alert('Modal has been closed.');
+            }}
+          >
+            <View 
+              style={{
+                flex: 1,
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgba(0,0,0,.3)"
+              }}
+            >
+              <View
+                style={{
+                  backgroundColor: "#fafbfd",
+                  padding: 16
+                }}
+              >
+                <Text>Hello World!</Text>
+                <Button
+                  onPress={() => {
+                    this.setState({modalVisible: !this.state.modalVisible});
+                  }}>
+                  Hide Modal
+                </Button>
+              </View>
+            </View>
+          </Modal>
         </View>
       </Page>
     );

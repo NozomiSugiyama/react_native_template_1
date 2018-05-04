@@ -12,11 +12,12 @@ import {
   ButtonGroupComponentPage,
   CheckboxComponentPage,
   DropdownComponentPage,
+  ExpansionPanelComponentPage,
+  ModalComponentPage,
   HeadingComponentPage,
   ListGroupComponentPage,
-  SwitchComponentPage,
-  ExpansionPanelComponentPage,
   SliderComponentPage,
+  SwitchComponentPage,
 } from "react_native_template_1/src/page/components";
 
 export default class extends React.Component {
@@ -103,6 +104,11 @@ export default class extends React.Component {
             title="dropdown-component-page"
             // initial={true}
           />
+          <Scene
+            key="expansionPanelComponentPage"
+            component={ExpansionPanelComponentPage}
+            title="expansion-panel-component-page"
+          />
           <Scene 
             key="headingComponentPage"
             component={HeadingComponentPage}
@@ -113,20 +119,20 @@ export default class extends React.Component {
             component={ListGroupComponentPage}
             title="list-group-component-page"
           />
-          <Scene 
-            key="switchComponentPage"
-            component={SwitchComponentPage}
-            title="switch-component-page"
-          />
           <Scene
-            key="expansionPanelComponentPage"
-            component={ExpansionPanelComponentPage}
-            title="expansion-panel-component-page"
+            key="modalComponentPage"
+            component={ModalComponentPage}
+            title="modal-component-page"
           />
           <Scene
             key="sliderComponentPage"
             component={SliderComponentPage}
             title="slider-component-page"
+          />
+          <Scene 
+            key="switchComponentPage"
+            component={SwitchComponentPage}
+            title="switch-component-page"
           />
         </Scene>
       </Router>

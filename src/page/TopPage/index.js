@@ -45,11 +45,12 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.buttonGroupComponentPage()}>ButtonGroup</ListGroupItem>
               <ListGroupItem onPress={() => Actions.checkboxComponentPage()}>Checkbox</ListGroupItem>
               <ListGroupItem onPress={() => Actions.dropdownComponentPage()}>Dropdown</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.expansionPanelComponentPage()}>ExpansionPanel</ListGroupItem>
               <ListGroupItem onPress={() => Actions.headingComponentPage()}>Heading</ListGroupItem>
               <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
-              <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
-              <ListGroupItem onPress={() => Actions.expansionPanelComponentPage()}>ExpansionPanel</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.modalComponentPage()}>Modal</ListGroupItem>
               <ListGroupItem onPress={() => Actions.sliderComponentPage()}>Slider</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
             </ListGroup>
             <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
             <Button onPress={() => Actions.colorListPage()}>Colors</Button>
