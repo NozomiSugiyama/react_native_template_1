@@ -1,5 +1,5 @@
 import React from "react"
-import { Text, View } from "react-native"
+import { Picker, Text, View } from "react-native"
 import { Actions } from "react-native-router-flux"
 import { Heading, Page, Checkbox, Dropdown, Button } from "react_native_template_1/src/components"
 import { ListGroup, ListGroupItem } from "react_native_template_1/src/components/listGroup"
@@ -9,6 +9,7 @@ import styles from "./styles"
 export default class extends React.Component {
   componentWillMount() {
     this.setState({
+
     })
   }
   render() {
@@ -17,7 +18,7 @@ export default class extends React.Component {
         style={styles.host}
         {...this.props}
       >
-        <Heading>Checkboxes</Heading>
+        <Heading>Dropdown</Heading>
         <View>
           <View
             style={styles.content}
@@ -27,11 +28,28 @@ export default class extends React.Component {
               <Dropdown style={{width: 90}}>
                 <Button slot="button">test</Button>
                 <ListGroup slot="list">
-                  <ListGroupItem onPress={() => undefined}>Ludwig van Beethoven</ListGroupItem>
-                  <ListGroupItem onPress={() => undefined}>Johann Sebastian Bach</ListGroupItem>
-                  <ListGroupItem onPress={() => undefined}>Johannes Brahms</ListGroupItem>
+                  <ListGroupItem onPress={() => console.log("click item 1")}>item 1</ListGroupItem>
+                  <ListGroupItem onPress={() => console.log("click item 2")}>item 2</ListGroupItem>
+                  <ListGroupItem onPress={() => console.log("click item 3")}>item 3</ListGroupItem>
+                  <ListGroupItem onPress={() => console.log("click item 4")}>item 4</ListGroupItem>
                 </ListGroup>
               </Dropdown>
+            </View>
+          </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Native</Heading>
+            <View>
+              <Picker
+                selectedValue={"item3"}
+                onValueChange={(itemValue, itemIndex) => console.log(`select ${itemValue}`)}
+              >
+                <Picker.Item label="item 1" value="item1" />
+                <Picker.Item label="item 2" value="item2" />
+                <Picker.Item label="item 3" value="item3" />
+                <Picker.Item label="item 4" value="item4" />
+              </Picker>
             </View>
           </View>
         </View>
