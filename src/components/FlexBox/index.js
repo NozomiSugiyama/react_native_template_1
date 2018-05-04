@@ -15,16 +15,16 @@ export default ({
   ...props
 }) =>
   <Component
-    style={{
-      ...{
+    style={[
+      {
         flex: flexGrow,
         flexWrap: flexWrap ? "wrap" : "nowrap",
         alignItems,
         flexDirection,
         justifyContent
       },
-      ...style
-    }}
+      style
+    ]}
     {...props}
   >
     {children}

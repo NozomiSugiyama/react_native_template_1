@@ -1,32 +1,55 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Platform, Dimensions, NativeModules, LayoutAnimation } from "react-native";
 import { commons, types } from "./style";
+import FlexBox from "../FlexBox"
 import Heading from "../Heading"
 
+const { UIManager } = NativeModules;
+
+UIManager.setLayoutAnimationEnabledExperimental &&
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+  
 export default ({
-  type = "info", // primary secondary success danger warning info light dark
-  style = {},
-  textStyle = {},
-  title = "",
   children,
+  root,
+  type = "none", // none primary secondary success danger warning info light dark
+  style = {},
+  visible,
   ...props
-}) =>
-  <View
-    style={{
-      ...commons.view,
-      ...types.view[type],
-      ...style
-    }}
-  >
-    {title ? <Heading size="small" textStyle={types.text[type]}>{title}</Heading> : null}
-    <Text
-      style={{
-        ...commons.text,
-        ...types.text[type],
-        ...textStyle
-      }}
-      {...props}
+}) => {
+  LayoutAnimation.configureNext({
+    duration: 30,
+    update: {
+      type: LayoutAnimation.Types.easeInEaseOut,
+    }
+  });
+  const { width, height } = Dimensions.get('window');
+  console.log(width, height)
+  return (
+    <FlexBox
+      alignItems="center"
+      justifyContent="center"
+      style={[
+        commons.host,
+        {
+          width,
+          height
+        },
+        visible ? {opacity: 1} : {maxHeight: 0, opacity: 0}
+      ]}
     >
-      {children}
-    </Text>
-  </View>
+      <FlexBox
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+        style={[
+          commons.view,
+          style
+        ]}
+        {...props}
+      >
+        {children}
+      </FlexBox>
+    </FlexBox>
+  )
+}
