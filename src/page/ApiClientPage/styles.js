@@ -8,8 +8,5 @@ export default {
     marginBottom: 32,
     borderWidth: 1,
     borderColor: "#f8f9fa"
-  },
-  badgeList: {
-    paddingBottom: 8,
   }
 };
