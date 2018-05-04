@@ -59,7 +59,7 @@ export default class extends React.Component {
           type="primary"
         >
           <Heading>Standard Modal</Heading>
-          <Text>Type none</Text>
+          <Text>Type primary</Text>
           <Button onPress={() => this.setState({modal2Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -67,7 +67,7 @@ export default class extends React.Component {
           type="secondary"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type secondary</Text>
           <Button onPress={() => this.setState({modal3Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -75,7 +75,7 @@ export default class extends React.Component {
           type="success"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type success</Text>
           <Button onPress={() => this.setState({modal4Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -83,7 +83,7 @@ export default class extends React.Component {
           type="danger"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type danger</Text>
           <Button onPress={() => this.setState({modal5Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -91,7 +91,7 @@ export default class extends React.Component {
           type="warning"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type warning</Text>
           <Button onPress={() => this.setState({modal6Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -99,7 +99,7 @@ export default class extends React.Component {
           type="info"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type info</Text>
           <Button onPress={() => this.setState({modal7Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -107,7 +107,7 @@ export default class extends React.Component {
           type="light"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type light</Text>
           <Button onPress={() => this.setState({modal8Visible: false})}>Hide Modal</Button>
         </Modal>
         <Modal
@@ -115,7 +115,7 @@ export default class extends React.Component {
           type="dark"
         >
           <Heading>Standard Modal</Heading>
-          <Text></Text>
+          <Text>Type dark</Text>
           <Button onPress={() => this.setState({modal9Visible: false})}>Hide Modal</Button>
         </Modal>
       </Page>
