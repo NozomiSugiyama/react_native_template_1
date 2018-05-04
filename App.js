@@ -15,7 +15,8 @@ import {
   HeadingComponentPage,
   ListGroupComponentPage,
   SwitchComponentPage,
-  ExpansionPanelComponentPage
+  ExpansionPanelComponentPage,
+  SliderComponentPage,
 } from "react_native_template_1/src/page/components";
 
 export default class extends React.Component {
@@ -121,6 +122,11 @@ export default class extends React.Component {
             key="expansionPanelComponentPage"
             component={ExpansionPanelComponentPage}
             title="expansion-panel-component-page"
+          />
+          <Scene
+            key="sliderComponentPage"
+            component={SliderComponentPage}
+            title="slider-component-page"
           />
         </Scene>
       </Router>
