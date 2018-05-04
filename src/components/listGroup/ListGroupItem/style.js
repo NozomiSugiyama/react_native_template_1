@@ -11,7 +11,6 @@ export const commons = {
     minHeight: 42
   },
   text: {},
-  badge: {},
   activeView: {
     backgroundColor: colors.primary[300]
   },

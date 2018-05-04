@@ -17,13 +17,13 @@ export default ({
   ...props
 }) => 
   <Component
-    style={{
-      ...commons.view,
-      ...(active ? commons.activeView: {}),
-      ...(disabled ? commons.disabledView: {}),
-      ...types.view[type],
-      ...style,
-    }}
+    style={[
+      commons.view,
+      (active ? commons.activeView: {}),
+      (disabled ? commons.disabledView: {}),
+      types.view[type],
+      style,
+    ]}
     onPress={onPress}
     {...props}
     underlayColor={!disabled && types.underlayColor[type]}
@@ -33,17 +33,18 @@ export default ({
       justifyContent="space-between"
     >
       <Text
-        style={{
-          ...commons.text,
-          ...(active ? commons.activeText: {}),
-          ...(disabled ? commons.disabledText: {}),
-          ...types.text[type],
-        }}
+        style={[
+          commons.text,
+          (active ? commons.activeText: {}),
+          (disabled ? commons.disabledText: {}),
+          types.text[type],
+          (badgeText ? { maxWidth: "90%" } : {})
+        ]}
       >
         {children}
       </Text>
       {badgeText 
-     ? <Badge type={type == "none" ? "primary" : type} style={commons.badge}>{badgeText}</Badge>
+     ? <Badge type={type == "none" ? "primary" : type}>{badgeText}</Badge>
      : null
       }
     </FlexBox>
