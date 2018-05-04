@@ -23,8 +23,8 @@ export default ({
       type: LayoutAnimation.Types.easeInEaseOut,
     }
   });
+
   const { width, height } = Dimensions.get('window');
-  console.log(width, height)
   return (
     <FlexBox
       alignItems="center"
@@ -44,6 +44,7 @@ export default ({
         flexDirection="column"
         style={[
           commons.view,
+          types.view[type],
           style
         ]}
         {...props}

@@ -1,5 +1,8 @@
 import { colors } from "config";
 
+// underground
+import {commons as pageStyleCommons } from "../Page/style"
+
 export const commons = {
   host: {
     backgroundColor: "rgba(0,0,0,.3)",
@@ -7,8 +10,9 @@ export const commons = {
     overflow: "hidden",
     paddingLeft: 32,
     paddingRight: 32,
-    left: 0,
-    top: 0,
+    left: -pageStyleCommons.host.paddingLeft,
+    top: -pageStyleCommons.host.paddingTop,
+    paddingBottom: 64
   },
   view: {
     backgroundColor: "#fafbfd",
