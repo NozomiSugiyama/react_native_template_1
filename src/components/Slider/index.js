@@ -33,8 +33,12 @@ export default ({
         }}
         orientation={orientation}
         value={value}
+        minimumTrackTintColor={minimumTrackTintColor}
+        maximumTrackTintColor={maximumTrackTintColor}
         maximumValue={maximumValue}
         minimumValue={minimumValue}
-        onValueChange={onValueChange} 
+        onValueChange={onValueChange}
+        step={step}
+        thumbTintColor={thumbTintColor}
         {...props}
     />
