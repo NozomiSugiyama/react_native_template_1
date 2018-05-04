@@ -14,7 +14,8 @@ import {
   DropdownComponentPage,
   HeadingComponentPage,
   ListGroupComponentPage,
-  SwitchComponentPage
+  SwitchComponentPage,
+  ExpansionPanelComponentPage
 } from "react_native_template_1/src/page/components";
 
 export default class extends React.Component {
@@ -115,6 +116,11 @@ export default class extends React.Component {
             key="switchComponentPage"
             component={SwitchComponentPage}
             title="switch-component-page"
+          />
+          <Scene
+            key="expansionPanelComponentPage"
+            component={ExpansionPanelComponentPage}
+            title="expansion-panel-component-page"
           />
         </Scene>
       </Router>

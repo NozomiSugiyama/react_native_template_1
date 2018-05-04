@@ -48,6 +48,7 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.headingComponentPage()}>Heading</ListGroupItem>
               <ListGroupItem onPress={() => Actions.listGroupComponentPage()}>ListGroup</ListGroupItem>
               <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.expansionPanelComponentPage()}>ExpansionPanel</ListGroupItem>
             </ListGroup>
             <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
             <Button onPress={() => Actions.colorListPage()}>Colors</Button>
