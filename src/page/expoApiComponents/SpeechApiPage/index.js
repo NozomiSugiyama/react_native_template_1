@@ -1,7 +1,7 @@
 import React from "react"
 import { Text, View } from "react-native"
 import { Actions } from "react-native-router-flux"
-import { FlexBox, TextInput, Button, Heading, Page } from "react_native_template_1/src/components"
+import { Slider, FlexBox, TextInput, Button, Heading, Page } from "react_native_template_1/src/components"
 import { ImagePicker, Permissions, Speech } from 'expo';
 
 import styles from "./styles"
@@ -12,8 +12,10 @@ export default class extends React.Component {
   componentWillMount() {
     this.setState({
       japaneseText: "こんにちは",
+      japaneseVoicePitch: 1.0,
       japaneseListenButtonIsDisabled: false,
       englishText: "hello",
+      englishVoicePitch: 1.0,
       englishListenButtonIsDisabled: false,
     })
   }
@@ -43,6 +45,7 @@ export default class extends React.Component {
                     this.state.japaneseText,
                     {
                       language: "ja", // IETF BCP 47
+                      pitch: this.state.japaneseVoicePitch,
                       onStart: () => this.setState({ japaneseListenButtonIsDisabled: true }),
                       onDone: () => this.setState({ japaneseListenButtonIsDisabled: false }),
                       onError: () => this.setState({ japaneseListenButtonIsDisabled: false })
@@ -53,6 +56,12 @@ export default class extends React.Component {
                 listen
               </Button>
             </FlexBox>
+            <Slider
+              defaultValue={this.state.japaneseVoicePitch}
+              maximumValue={2.0}
+              step={0.1}
+              onValueChange={japaneseVoicePitch => this.setState({japaneseVoicePitch})}
+            />
           </View>
           <View
             style={styles.content}
@@ -72,6 +81,7 @@ export default class extends React.Component {
                     this.state.englishText,
                     {
                       language: "en", // IETF BCP 47
+                      pitch: this.state.englishVoicePitch,
                       onStart: () => this.setState({ englishListenButtonIsDisabled: true }),
                       onDone: () => this.setState({ englishListenButtonIsDisabled: false }),
                       onError: () => this.setState({ englishListenButtonIsDisabled: false })
@@ -82,6 +92,12 @@ export default class extends React.Component {
                 listen
               </Button>
             </FlexBox>
+            <Slider
+              defaultValue={this.state.englishVoicePitch}
+              maximumValue={2.0}
+              step={0.1}
+              onValueChange={englishVoicePitch => this.setState({englishVoicePitch})}
+            />
           </View>
         </View>
       </Page>
