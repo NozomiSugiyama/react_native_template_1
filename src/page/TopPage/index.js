@@ -63,7 +63,9 @@ export default class extends React.Component {
                 width: 300
               }}
             >
+              <ListGroupItem onPress={() => Actions.cameraApiPage()}>Camera</ListGroupItem>
               <ListGroupItem onPress={() => Actions.imagePickerApiPage()}>Image Picker</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.notificationApiPage()}>Notification</ListGroupItem>
             </ListGroup>
           </View>
         </FlexBox>

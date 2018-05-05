@@ -12,6 +12,7 @@ export default class extends React.Component {
   componentWillMount() {
     this.setState({
       image: null,
+      image2: null
     })
   }
   render() {
