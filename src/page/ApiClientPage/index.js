@@ -1,7 +1,7 @@
 import React from "react"
 import * as postApi from "react_native_template_1/src/api/jsonplaceholderApi/posts"
-import { Modal, Text, View, Linking } from "react-native"
-import { Alert, Button, Heading, Page } from "react_native_template_1/src/components"
+import { Alert, Text, View, Linking } from "react-native"
+import { Alert as AlertComponent, Button, Heading, Page } from "react_native_template_1/src/components"
 import { ListGroup, ListGroupItem } from "react_native_template_1/src/components/listGroup"
 import { colors } from "config"
 
@@ -12,7 +12,6 @@ export default class extends React.Component {
   componentWillMount() {
     this.setState({
       posts: [],
-      modalVisible: false
     })
   }
 
@@ -23,7 +22,7 @@ export default class extends React.Component {
         {...this.props}
       >
         <Heading>API Client</Heading>
-        <Alert>
+        <AlertComponent>
           Use{' '}
           <Text
             style={{ color: "blue" }}
@@ -31,7 +30,7 @@ export default class extends React.Component {
           >
             https://jsonplaceholder.typicode.com/
           </Text>
-        </Alert>
+        </AlertComponent>
         <View
           style={styles.content}
         >
@@ -53,44 +52,12 @@ export default class extends React.Component {
             <ListGroupItem
               badgeText={x.userId}
               key={i}
-              onPress={() => this.setState({modalVisible: true})}
+              onPress={() => Alert.alert(x.title, x.body)}
             >
               {x.title}
             </ListGroupItem>
           )}
           </ListGroup>
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={this.state.modalVisible}
-            onRequestClose={() => {
-              alert('Modal has been closed.');
-            }}
-          >
-            <View 
-              style={{
-                flex: 1,
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "rgba(0,0,0,.3)"
-              }}
-            >
-              <View
-                style={{
-                  backgroundColor: "#fafbfd",
-                  padding: 16
-                }}
-              >
-                <Text>Hello World!</Text>
-                <Button
-                  onPress={() => {
-                    this.setState({modalVisible: !this.state.modalVisible});
-                  }}>
-                  Hide Modal
-                </Button>
-              </View>
-            </View>
-          </Modal>
         </View>
       </Page>
     );
