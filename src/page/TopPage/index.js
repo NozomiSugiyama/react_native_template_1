@@ -63,7 +63,7 @@ export default class extends React.Component {
                 width: 300
               }}
             >
-              <ListGroupItem onPress={() => Actions.imagePickerComponentPage()}>Image Picker</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.imagePickerApiPage()}>Image Picker</ListGroupItem>
             </ListGroup>
           </View>
         </FlexBox>

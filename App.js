@@ -21,8 +21,8 @@ import {
 } from "react_native_template_1/src/page/originalComponents";
 
 import {
-  ImagePickerComponentPage
-} from "react_native_template_1/src/page/expoComponents"
+  ImagePickerApiPage
+} from "react_native_template_1/src/page/expoApiComponents"
 
 export default class extends React.Component {
 
@@ -139,11 +139,11 @@ export default class extends React.Component {
             title="switch-component-page"
           />
 
-          {/* Expo Component */}
+          {/* Expo Api */}
           <Scene
-            key="imagePickerComponentPage"
-            component={ImagePickerComponentPage}
-            title="image-picker-component-page"
+            key="imagePickerApiPage"
+            component={ImagePickerApiPage}
+            title="image-picker-api-page"
           />
         </Scene>
       </Router>

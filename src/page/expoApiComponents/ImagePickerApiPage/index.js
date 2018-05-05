@@ -6,6 +6,8 @@ import { ImagePicker, Permissions } from 'expo';
 
 import styles from "./styles"
 
+// https://docs.expo.io/versions/latest/sdk/imagepicker.html
+
 export default class extends React.Component {
   componentWillMount() {
     this.setState({
@@ -29,7 +31,7 @@ export default class extends React.Component {
           
                 const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
                 if (status === 'granted') {
-                  let result = await ImagePicker.launchImageLibraryAsync({
+                  const result = await ImagePicker.launchImageLibraryAsync({
                     allowsEditing: true,
                     aspect: [4, 3],
                   });
@@ -50,11 +52,30 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
-          </View>
-          <View
-            style={styles.content}
-          >
-            <Heading size="xsmall" align="center"></Heading>
+            <Heading size="xsmall" align="center">Base64 format</Heading>
+            <Button
+              onPress={async () => {
+          
+                const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+                if (status === 'granted') {
+                  const result = await ImagePicker.launchImageLibraryAsync({
+                    allowsEditing: true,
+                    aspect: [4, 3],
+                    base64: true
+                  });
+                  if (!result.cancelled) {
+                    this.setState({ image2: result.uri });
+                  }
+                } else {
+                  const { status } = await Permissions.getAsync(Permissions.CAMERA_ROLL);
+                  alert("カメラの権限を許可して...!");
+                }
+                
+              }}
+            >
+              select Image
+            </Button>
+            {this.state.image2 ? <Image style={{width: "100%", height: 200}} uri={this.state.image2}/> : null}
           </View>
         </View>
       </Page>
