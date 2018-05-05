@@ -23,7 +23,8 @@ import {
 import {
   CameraApiPage,
   ImagePickerApiPage,
-  NotificationApiPage
+  NotificationApiPage,
+  SpeechApiPage
 } from "react_native_template_1/src/page/expoApiComponents"
 
 export default class extends React.Component {
@@ -156,6 +157,11 @@ export default class extends React.Component {
             key="notificationApiPage"
             component={NotificationApiPage}
             title="notification-api-page"
+          />
+          <Scene
+            key="speechApiPage"
+            component={SpeechApiPage}
+            title="speech-api-page"
           />
         </Scene>
       </Router>
