@@ -19,6 +19,7 @@ export default class extends React.Component {
         {...this.props}
       >
         <Heading>Dropdown</Heading>
+        <Alert>未完成 committer募集中</Alert>
         <View>
           <View
             style={styles.content}

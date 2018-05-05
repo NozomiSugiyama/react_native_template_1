@@ -21,6 +21,7 @@ export default class extends React.Component {
         {...this.props}
       >
         <Heading>Camera</Heading>
+        <Alert>未完成 committer募集中</Alert>
         <View>
           <View
             style={styles.content}

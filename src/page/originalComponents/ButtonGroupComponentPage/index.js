@@ -15,7 +15,7 @@ export default class extends React.Component {
       >
         <Heading>GroupList</Heading>
         <View>
-          <Alert>作成中</Alert>
+          <Alert>未完成 committer募集中</Alert>
           <View
             style={styles.content}
           >
