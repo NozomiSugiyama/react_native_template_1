@@ -27,17 +27,17 @@ export default class extends React.Component {
             <Button
               onPress={async () => {
           
-                const { status } = await Permissions.getAsync(Permissions.CAMERA_ROLL);
+                const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
                 if (status === 'granted') {
                   let result = await ImagePicker.launchImageLibraryAsync({
                     allowsEditing: true,
                     aspect: [4, 3],
                   });
-                  console.log(result);
                   if (!result.cancelled) {
                     this.setState({ image: result.uri });
                   }
                 } else {
+                  const { status } = await Permissions.getAsync(Permissions.CAMERA_ROLL);
                   alert("カメラの権限を許可して...!");
                 }
                 
@@ -45,7 +45,7 @@ export default class extends React.Component {
             >
               select Image
             </Button>
-            {this.state.image && <Image source={this.state.image}/>}
+            {this.state.image ? <Image style={{width: "100%", height: 200}} uri={this.state.image}/> : null}
           </View>
           <View
             style={styles.content}
