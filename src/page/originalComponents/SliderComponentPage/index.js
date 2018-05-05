@@ -7,50 +7,62 @@ import { colors } from "config";
 import styles from "./styles"
 
 export default class extends React.Component {
-    state = {
-        defaultValue: 50,
-        squareValue: 30,
-    }
-    changeDefaultValue = (value) => {
-      this.setState({
-        defaultValue: value,
-      });
-    }
-    changeSquareValue = (value) => {
-        this.setState({
-            squareValue: value,
-        });
-      }
-    render() {
-      const defaultValue = this.state.defaultValue;
-      const squareValue = this.state.squareValue;
-      return (
-        <Page
-          style={styles.host}
-          {...this.props}
-        >
-          <Heading>Slider</Heading>
-          <View>
-            <View
-              style={styles.content}
-            >
-              <Heading size="xsmall" align="center">Default</Heading>
-              <Text style={styles.text}>
-               Value: {defaultValue}
-              </Text>
-              <Slider maximumValue={100} onValueChange={this.changeDefaultValue} value={defaultValue} step={1}/>
-            </View>
-            <View
-              style={styles.content}
-            >
-              <Heading size="xsmall" align="center">Square</Heading>
-              <Text style={styles.text}>
-              Value: {squareValue}
-              </Text>
-              <Slider  maximumValue={100} onValueChange={this.changeSquareValue} value={squareValue} step={1} minimumTrackTintColor={colors.primary[300]} maximumTrackTintColor={colors.primary[100]} thumbTintColor={colors.primary[500]}/>
-            </View>
+
+  componentWillMount() {
+    this.setState({
+      sliderValue: 50
+    })
+  }
+
+  render() {
+    return (
+      <Page
+        style={styles.host}
+        {...this.props}
+      >
+        <Heading>Slider</Heading>
+        <View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Standard</Heading>
+            <Slider type="primary" />
+            <Slider type="secondary" />
+            <Slider type="success" />
+            <Slider type="danger" />
+            <Slider type="warning" />
+            <Slider type="info" />
+            <Slider type="light" />
+            <Slider type="dark" />
           </View>
-        </Page>
-      );
-    }
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Disabled</Heading>
+            <Slider type="primary" disabled value={0} maximumValue={100} />
+            <Slider type="secondary" disabled value={0} maximumValue={100} />
+            <Slider type="success" disabled value={20} maximumValue={100} />
+            <Slider type="danger" disabled value={40} maximumValue={100} />
+            <Slider type="warning" disabled value={60} maximumValue={100} />
+            <Slider type="info" disabled value={80} maximumValue={100} />
+            <Slider type="light" disabled value={100} maximumValue={100} />
+            <Slider type="dark" disabled value={100} maximumValue={100} />
+          </View>
+          <View
+            style={styles.content}
+          >
+            <Heading size="xsmall" align="center">Change Event</Heading>
+            <Slider 
+              type="primary"
+              defaultValue={this.state.sliderValue}
+              maximumValue={100}
+              step={1}
+              onValueChange={sliderValue => this.setState({sliderValue})}
+            />
+            <Heading>result: {this.state.sliderValue || this.state.sliderInitialValue}</Heading>
+          </View>
+        </View>
+      </Page>
+    );
+  }
 }

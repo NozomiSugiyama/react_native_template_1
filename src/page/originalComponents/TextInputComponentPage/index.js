@@ -69,7 +69,7 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
-            <Heading size="xsmall" align="center">onChange Event</Heading>
+            <Heading size="xsmall" align="center">Change Event</Heading>
             <TextInput 
               type="primary"
               placeholder="primary"

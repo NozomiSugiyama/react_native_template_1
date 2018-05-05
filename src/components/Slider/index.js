@@ -1,44 +1,50 @@
 import React from "react"
-import { Text, View } from "react-native"
-import { commons } from "./style"
-import { Slider } from 'react-native-elements'
+import { Slider, Text, View } from "react-native"
+import { commons, types } from "./style"
 
+// https://facebook.github.io/react-native/docs/slider.html#minimumtracktintcolor
 
-export default ({
-    animateTransitions = false,
-    animationConfig = "",
-    animationType,
-    debugTouchArea = false,
-    disabled = false,
-    maximumTrackTintColor,
-    maximumValue = 1,
-    minimumTrackTintColor,
-    minimumValue = 0,
-    onSlidingComplete,
-    onSlidingStart,
-    onValueChange,
-    orientation = "horizontal",
-    step = 0,
-    thumbStyle = {},
-    thumbTintColor,
-    thumbTouchSize,
-    trackStyle = {},
-    value = 0,
-    style = {},
-    ...props
-  }) => 
-    <Slider
-        style={{
-            ...style
-        }}
-        orientation={orientation}
-        value={value}
+export default class extends React.Component {
+  componentWillMount() {
+    this.setState({
+      defaultValue: undefined
+    })
+  }
+
+  componentDidMount() {
+    (async () => {
+      this.setState({
+        defaultValue: this.props.defaultValue
+      })
+    })()
+  }
+
+  render() {
+    const {
+      type = "primary", // primary secondary success danger warning info light dark
+      disabled,
+      value,
+      style = {},
+      thumbTintColor = types.thumbTintColor[type], // android only
+      minimumTrackTintColor = types.minimumTrackTintColor[type],
+      maximumTrackTintColor = types.maximumTrackTintColor[type],
+      ...props
+    } = this.props
+
+    return (
+      <Slider
+        disabled={disabled}
+        style={[
+          commons.host,
+          disabled ? { opacity: 0.7 } : {},
+          style
+        ]}
+        value={!value && this.state.defaultValue ? this.state.defaultValue : value}
+        thumbTintColor={thumbTintColor}
         minimumTrackTintColor={minimumTrackTintColor}
         maximumTrackTintColor={maximumTrackTintColor}
-        maximumValue={maximumValue}
-        minimumValue={minimumValue}
-        onValueChange={onValueChange}
-        step={step}
-        thumbTintColor={thumbTintColor}
         {...props}
-    />
+      />
+    )
+  }
+}
