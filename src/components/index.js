@@ -14,3 +14,4 @@ export { default as Modal }          from "./Modal"
 export { default as Page }           from "./Page";
 export { default as Slider }         from "./Slider";
 export { default as Switch }         from "./Switch";
+export { default as TextInput }      from "./TextInput";

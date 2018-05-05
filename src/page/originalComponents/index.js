@@ -11,3 +11,4 @@ export { default as ListGroupComponentPage }      from "./ListGroupComponentPage
 export { default as ModalComponentPage }          from "./ModalComponentPage"
 export { default as SliderComponentPage }         from "./SliderComponentPage"
 export { default as SwitchComponentPage }         from "./SwitchComponentPage"
+export { default as TextInputComponentPage }      from "./TextInputComponentPage"

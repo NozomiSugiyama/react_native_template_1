@@ -18,6 +18,7 @@ import {
   ListGroupComponentPage,
   SliderComponentPage,
   SwitchComponentPage,
+  TextInputComponentPage
 } from "react_native_template_1/src/page/originalComponents";
 
 import {
@@ -109,7 +110,6 @@ export default class extends React.Component {
             key="dropdownComponentPage"
             component={DropdownComponentPage}
             title="dropdown-component-page"
-            // initial={true}
           />
           <Scene
             key="expansionPanelComponentPage"
@@ -140,6 +140,11 @@ export default class extends React.Component {
             key="switchComponentPage"
             component={SwitchComponentPage}
             title="switch-component-page"
+          />
+          <Scene 
+            key="textInputComponentPage"
+            component={TextInputComponentPage}
+            title="text-input-component-page"
           />
 
           {/* Expo Api */}
