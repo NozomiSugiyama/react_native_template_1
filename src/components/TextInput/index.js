@@ -20,6 +20,7 @@ export default class extends React.Component {
       editable = isActive,
       onBlur = () => undefined,
       onFocus = () => undefined,
+      // multiline
       // placeholder=""
       // defaultValue=""
       // onChangeText={(text) => undefined}

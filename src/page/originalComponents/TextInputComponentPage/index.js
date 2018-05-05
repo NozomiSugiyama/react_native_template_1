@@ -61,6 +61,14 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
+            <Heading size="xsmall" align="center">Multiline</Heading>
+            <TextInput type="primary" multiline placeholder="primary" defaultValue="defaultValue" />
+            <TextInput type="secondary" multiline placeholder="secondary" defaultValue="defaultValue" />
+            <TextInput type="success" multiline placeholder="success" defaultValue="defaultValue" />
+          </View>
+          <View
+            style={styles.content}
+          >
             <Heading size="xsmall" align="center">onChange Event</Heading>
             <TextInput 
               type="primary"
