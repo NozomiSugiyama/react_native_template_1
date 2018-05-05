@@ -32,7 +32,7 @@ export default class extends React.Component {
             <Heading size="large">template 1</Heading>
           </View>
           <View>
-            <Heading size="small" style={{alignSelf: "flex-start"}}>Components</Heading>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>Original Components</Heading>
             <ListGroup
               style={{
                 width: 300
@@ -52,9 +52,19 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.sliderComponentPage()}>Slider</ListGroupItem>
               <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
             </ListGroup>
-            <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
-            <Button onPress={() => Actions.colorListPage()}>Colors</Button>
-            <Button onPress={() => Actions.apiClientPage()}>API Client</Button>
+            <View>
+              <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
+              <Button onPress={() => Actions.colorListPage()}>Colors</Button>
+              <Button onPress={() => Actions.apiClientPage()}>RESTAPI Client</Button>
+            </View>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>Expo Components</Heading>
+            <ListGroup
+              style={{
+                width: 300
+              }}
+            >
+              <ListGroupItem onPress={() => Actions.imagePickerComponentPage()}>Image Picker</ListGroupItem>
+            </ListGroup>
           </View>
         </FlexBox>
       </Page>

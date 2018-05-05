@@ -1,26 +1,23 @@
 import config from "../config"
 
-// struct of post object
-// {
-//   title: 'foo',
-//   body: 'bar',
-//   userId: 1
-// }
-
 export default async ({
-  post
+  image,
+  features
 }) => {
   const response = await fetch(
-    `${config.origin}/posts`,
+    `${config.origin}/v1/images:annotate?key=${config.key}`,
     {
       method : "POST",
-      body   : JSON.stringify(post),
+      body   : {
+        image,
+        features
+      },
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       }
     }
   )
-  
+
   if (!response.ok)
     throw response
 

@@ -18,7 +18,11 @@ import {
   ListGroupComponentPage,
   SliderComponentPage,
   SwitchComponentPage,
-} from "react_native_template_1/src/page/components";
+} from "react_native_template_1/src/page/originalComponents";
+
+import {
+  ImagePickerComponentPage
+} from "react_native_template_1/src/page/expoComponents"
 
 export default class extends React.Component {
 
@@ -133,6 +137,13 @@ export default class extends React.Component {
             key="switchComponentPage"
             component={SwitchComponentPage}
             title="switch-component-page"
+          />
+
+          {/* Expo Component */}
+          <Scene
+            key="imagePickerComponentPage"
+            component={ImagePickerComponentPage}
+            title="image-picker-component-page"
           />
         </Scene>
       </Router>
