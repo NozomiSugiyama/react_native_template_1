@@ -20,7 +20,7 @@ export default class extends React.Component {
         style={styles.host}
         {...this.props}
       >
-        <Heading>Image Picker</Heading>
+        <Heading>Camera</Heading>
         <View>
           <View
             style={styles.content}
