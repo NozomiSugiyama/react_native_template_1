@@ -23,6 +23,7 @@ import {
 
 import {
   CameraApiPage,
+  IconApiPage,
   ImagePickerApiPage,
   NotificationApiPage,
   SpeechApiPage
@@ -42,12 +43,7 @@ export default class extends React.Component {
         "Nunito-Regular"      : require("./assets/fonts/Nunito-Regular.ttf"),
         "Nunito-Italic"       : require("./assets/fonts/Nunito-Italic.ttf"),
         "Nunito-Bold"         : require("./assets/fonts/Nunito-Bold.ttf"),
-        "Menlo"               : require("./assets/fonts/Menlo.ttf"),
-        "Inconsolata-Regular" : require("./assets/fonts/Inconsolata-Regular.ttf"),
         "Nunito-SemiBold"     : require("./assets/fonts/Nunito-SemiBold.ttf"),
-        "FontAwesome-Regular" : require("./assets/fonts/fa-regular-400.ttf"),
-        "FontAwesome-Brands"  : require("./assets/fonts/fa-brands-400.ttf"),
-        "FontAwesome-solid"   : require("./assets/fonts/fa-solid-900.ttf"),
       });
       this.setState({
         fontLoaded: true
@@ -155,6 +151,11 @@ export default class extends React.Component {
             key="cameraApiPage"
             component={CameraApiPage}
             title="camera-api-page"
+          />
+          <Scene
+            key="iconApiPage"
+            component={IconApiPage}
+            title="icon-api-page"
           />
           <Scene
             key="imagePickerApiPage"

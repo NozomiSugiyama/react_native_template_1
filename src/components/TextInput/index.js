@@ -38,12 +38,10 @@ export default class extends React.Component {
         ]}
         onBlur={() => {
           this.setState({isFocus: false})
-          console.log("blur")
           onBlur()
         }}
         onFocus={() => {
           this.setState({isFocus: true})
-          console.log("focus")
           onFocus()
         }}
         editable={editable}

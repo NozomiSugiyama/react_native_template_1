@@ -65,6 +65,7 @@ export default class extends React.Component {
               }}
             >
               <ListGroupItem onPress={() => Actions.cameraApiPage()}>Camera</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.iconApiPage()}>Icon</ListGroupItem>
               <ListGroupItem onPress={() => Actions.imagePickerApiPage()}>Image Picker</ListGroupItem>
               <ListGroupItem onPress={() => Actions.notificationApiPage()}>Notification</ListGroupItem>
               <ListGroupItem onPress={() => Actions.speechApiPage()}>Speech</ListGroupItem>
