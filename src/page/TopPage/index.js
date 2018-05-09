@@ -58,7 +58,7 @@ export default class extends React.Component {
               <Button onPress={() => Actions.colorListPage()}>Colors</Button>
               <Button onPress={() => Actions.apiClientPage()}>RESTAPI Client</Button>
             </View>
-            <Heading size="small" style={{alignSelf: "flex-start"}}>Expo Components</Heading>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>Expo Api</Heading>
             <ListGroup
               style={{
                 width: 300
@@ -69,6 +69,14 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.imagePickerApiPage()}>Image Picker</ListGroupItem>
               <ListGroupItem onPress={() => Actions.notificationApiPage()}>Notification</ListGroupItem>
               <ListGroupItem onPress={() => Actions.speechApiPage()}>Speech</ListGroupItem>
+            </ListGroup>
+            <Heading size="small" style={{alignSelf: "flex-start"}}>Google Cloud Api</Heading>
+            <ListGroup
+              style={{
+                width: 300
+              }}
+            >
+              <ListGroupItem onPress={() => Actions.googleCloudVisionApiPage()}>Vision Api</ListGroupItem>
             </ListGroup>
           </View>
         </FlexBox>

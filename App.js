@@ -29,6 +29,10 @@ import {
   SpeechApiPage
 } from "react_native_template_1/src/page/expoApiComponents"
 
+import {
+  VisionApiPage
+} from "react_native_template_1/src/page/googleCloudApiComponents"
+
 export default class extends React.Component {
 
   componentWillMount() {
@@ -171,6 +175,13 @@ export default class extends React.Component {
             key="speechApiPage"
             component={SpeechApiPage}
             title="speech-api-page"
+          />
+
+          {/* Google Cloud Api */}
+          <Scene
+            key="googleCloudVisionApiPage"
+            component={VisionApiPage}
+            title="vision-api-page"
           />
         </Scene>
       </Router>

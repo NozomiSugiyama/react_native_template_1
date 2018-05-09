@@ -3,6 +3,7 @@ import { Text, View } from "react-native"
 import { Actions } from "react-native-router-flux"
 import { Image, Button, Alert, Heading, Page } from "react_native_template_1/src/components"
 import { ImagePicker, Permissions } from 'expo';
+import getMimeType from "react_native_template_1/src/util/getMimeType"
 
 import styles from "./styles"
 
@@ -64,8 +65,9 @@ export default class extends React.Component {
                     aspect: [4, 3],
                     base64: true
                   });
+                  
                   if (!result.cancelled) {
-                    this.setState({ image2: result.uri });
+                    this.setState({ image2: `data:${getMimeType(result.uri)};base64,${result.base64}` });
                   }
                 } else {
                   const { status } = await Permissions.getAsync(Permissions.CAMERA_ROLL);
