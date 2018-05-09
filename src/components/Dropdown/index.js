@@ -39,7 +39,7 @@ export default class extends React.Component {
         },
         onPress: () => {
           LayoutAnimation.configureNext({
-            duration: 30,
+            duration: 300,
             update: {
               type: LayoutAnimation.Types.easeInEaseOut,
             }

@@ -18,7 +18,7 @@ export default ({
   ...props
 }) => {
   LayoutAnimation.configureNext({
-    duration: 30,
+    duration: 300,
     update: {
       type: LayoutAnimation.Types.easeInEaseOut,
     }
