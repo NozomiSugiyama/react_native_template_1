@@ -2,7 +2,7 @@ import request from "./request"
 
 // https://cloud.google.com/vision/docs/detecting-faces
 
-export default ({
+export default async ({
   // struct 
   // images : [{
   //   content: String
@@ -10,7 +10,7 @@ export default ({
   // }]
   images
 }) => 
-  request({
+  (await request({
     requests: images.map(x => (
       {
         "image": {
@@ -25,4 +25,5 @@ export default ({
         }]
       }
     ))
-  })
+  }))
+    .responses

@@ -19,7 +19,6 @@ export default async ({
     }
   )
 
-  console.log(await response.json())
   if (!response.ok)
     throw response
 

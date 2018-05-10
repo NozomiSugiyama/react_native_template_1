@@ -3,14 +3,14 @@ import { Text, View, Linking } from "react-native"
 import { Alert, Image, Button, Heading, Page, FlexBox } from "react_native_template_1/src/components"
 import { ImagePicker, Permissions } from 'expo';
 import { getFaceDetection } from "react_native_template_1/src/api/gcpVisionApi"
-import getMimeType from "react_native_template_1/src/util/getMimeType"
 
 import styles from "./styles"
 
 export default class extends React.Component {
   componentWillMount() {
     this.setState({
-      faceDetectionBeImage: null,
+      faceDetectionImage: null,
+      faceDetectionApiResult: null
     })
   }
   
@@ -34,7 +34,7 @@ export default class extends React.Component {
           <View
             style={styles.content}
           >
-            <Heading size="xsmall" align="center">Face detection</Heading>
+            <Heading size="xsmall" align="center">Face Detection</Heading>
             <Button
               onPress={async () => {
           
@@ -47,16 +47,11 @@ export default class extends React.Component {
                   });
 
                   if (!result.cancelled) {
-                    this.setState({ faceDetectionBeImage: `data:${mimeType};base64,${result.base64.slice(4)}` });
-  
-                    const mimeType = getMimeType(result.uri)
-                    console.log(await getFaceDetection({
-                      images: [{
-                        // delete jpeg magic number `/9j/`
-                        content: mimeType == "image/jpeg" ? `data:${mimeType};base64,${result.base64.slice(4)}`
-                               :                            `data:${mimeType};base64,${result.base64}`
-                      }]
-                    }))
+                    this.setState({ faceDetectionImage: result.uri });
+
+                    this.setState({
+                      faceDetectionApiResult: await getFaceDetection({ images: [{ content: result.base64 }] })
+                    })
                   }
 
                 } else {
@@ -68,8 +63,8 @@ export default class extends React.Component {
             >
               select Image
             </Button>
-            {this.state.faceDetectionBeImage ? <Image style={{width: "100%", height: 200}} uri={this.state.image}/> : null}
-            {this.state.faceDetectionBeImage ? <Image style={{width: "100%", height: 200}} uri={this.state.image}/> : null}
+            {this.state.faceDetectionImage ? <Image style={{width: "100%", height: 200}} uri={this.state.faceDetectionImage}/> : null}
+            {this.state.faceDetectionApiResult ? <Alert>{JSON.stringify(this.state.faceDetectionApiResult)}</Alert> : null}
           </View>
         </View>
       </Page>
