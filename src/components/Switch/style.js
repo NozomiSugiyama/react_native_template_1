@@ -12,7 +12,6 @@ export const commons = {
     maxHeight: 24,
     maxWidth: 64,
     overflow: "hidden",
-    zIndex: 3,
     padding: 6,
     paddingRight: 9.6,
     paddingLeft: 9.6
@@ -40,7 +39,6 @@ export const commons = {
   },
   pallet: {
     maxWidth: 64 - 11,
-    zIndex: 0,
     flex: 1,
     flexDirection: "row",
     flexWrap: "nowrap",
@@ -51,7 +49,6 @@ export const commons = {
   selectorWrapper: {
     maxWidth: 0,
     overflow: "visible",
-    zIndex: 1,
   },
   selector: {
     minWidth: 20,
@@ -59,7 +56,6 @@ export const commons = {
     borderRadius: 20 / 2,
     position: "absolute",
     left: -11,
-    zIndex: 1,
     top: -2
   },
   selectorEnabled: {
