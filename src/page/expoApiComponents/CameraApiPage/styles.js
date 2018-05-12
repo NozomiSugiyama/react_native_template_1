@@ -2,14 +2,14 @@ import { colors } from "config";
 
 export default {
   host: {
+    flex: 1,
   },
   content: {
-    padding: 8,
-    marginBottom: 32,
-    borderWidth: 1,
-    borderColor: "#f8f9fa"
+    flex: 1,
   },
-  badgeList: {
-    paddingBottom: 8,
-  }
+  camera: {
+    flex: 1,
+    height: 500,
+  },
+  stab: {},
 };
