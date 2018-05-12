@@ -1,36 +1,19 @@
 import React from "react"
-import {LayoutAnimation, Text, View, NativeModules} from "react-native"
-import {Actions} from "react-native-router-flux"
-import {Alert, Button, ExpansionPanel, Heading, Page} from "react_native_template_1/src/components"
+import { Text, View } from "react-native"
+import { Alert, Button, ExpansionPanel, Heading, Page } from "react_native_template_1/src/components"
 
 import styles from "./styles"
 
-const { UIManager } = NativeModules;
-
-UIManager.setLayoutAnimationEnabledExperimental &&
-  UIManager.setLayoutAnimationEnabledExperimental(true);
-
 export default class extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      expansionOpened: false
-    }
-  }
 
-  _onPressButton() {
-    LayoutAnimation.configureNext({
-      duration: 200,
-      update: {
-        type: LayoutAnimation.Types.linear
-      },
-    });
-    this.setState({expansionOpened: !this.state.expansionOpened});
+  componentWillMount() {
+    this.setState({
+      expansionOpened: false
+    })
   }
 
   render() {
-    const state = this.state;
-
+    
     return (
       <Page
         style={styles.host}
@@ -39,22 +22,15 @@ export default class extends React.Component {
         <Heading>ExpansionPanel</Heading>
         <View>
           <Button
-            type="primary"
-            onPress={() => this._onPressButton()}>
-            {!state.expansionOpened ? "closed" : "opened"}
-            </Button>
-          <ExpansionPanel
-            enabled={this.state.expansionOpened}
-            type = {!state.expansionOpened ? "closed" : "opened"}
+            onPress={() => this.setState({ expansionOpened: !this.state.expansionOpened })}
           >
-            <Text
-              enabled={this.state.expansionOpened}
-              type = {!state.expansionOpened ? "closed" : "opened"}
-            >
-              Animations are very important to create a great user experience. Stationary objects must overcome inertia as they start moving. Objects in motion have momentum and rarely come to a stop immediately. Animations allow you to convey physically believable motion in your interface.
-              React Native provides two complementary animation systems: Animated for granular and interactive control of specific values, and LayoutAnimation for animated global layout transactions.
-              The Animated API is designed to make it very easy to concisely express a wide variety of interesting animation and interaction patterns in a very performant way. Animated focuses on declarative relationships between inputs and outputs, with configurable transforms in between, and simple start/stop methods to control time-based animation execution.
-              Animated exports four animatable component types: View, Text, Image, and ScrollView, but you can also create your own using Animated.createAnimatedComponent().
+            {this.state.expansionOpened ? "close" : "open"}
+          </Button>
+          <ExpansionPanel
+            visible={this.state.expansionOpened}
+          >
+            <Text>
+              Es war einmal ein kleines süßes Mädchen, das hatte jedermann lieb, der sie nur ansah, am allerliebsten aber ihre Großmutter, die wusste gar nicht, was sie alles dem Kinde geben sollte. Einmal schenkte sie ihm ein Käppchen von rotem Samt, und weil ihm das so wohl stand, und es nichts anders mehr tragen wollte, hieß es nur das Rotkäppchen. Eines Tages sprach seine Mutter zu ihm: "Komm, Rotkäppchen, da hast du ein Stück Kuchen und eine Flasche Wein, bring das der Großmutter hinaus; sie ist krank und schwach und wird sich daran laben. Mach dich auf, bevor es heiß wird, und wenn du hinauskommst, so geh hübsch sittsam und lauf nicht vom Wege ab, sonst fällst du und zerbrichst das Glas, und die Großmutter hat nichts. Und wenn du in ihre Stube kommst, so vergiss nicht guten Morgen zu sagen und guck nicht erst in allen Ecken herum!"
             </Text>
           </ExpansionPanel>
         </View>

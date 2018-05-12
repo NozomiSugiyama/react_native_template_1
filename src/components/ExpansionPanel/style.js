@@ -1,27 +1,17 @@
 import { colors } from "config";
 
 export const commons = {
-    view: {
-      width: '100%',
-    },
-    text: {}
-};
-
-export const closed = {
-  view: {
-    padding: 0,
-    height: 0,
-    backgroundColor: '#eee',
+  host: {
+    overflow: "hidden",
+    borderColor: "rgba(0,0,0,.125)",
+    borderRadius: 4,
+    marginLeft: 4,
+    marginRight: 4,
+    marginTop: 2,
+    marginBottom: 2,
   },
-  text: {}
-};
-
-export const opened = {
   view: {
-    padding: 10,
-    height: 'auto',
-    backgroundColor: '#eee',
-  },
-  text: {}
+    position: "absolute",
+    margin: 20
+  }
 };
-
