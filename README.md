@@ -17,3 +17,4 @@ $ npm run android
 
 react-native-scriptsで動かしてます
 詳しくは [create-react-native-app](https://github.com/react-community/create-react-native-app)
+
