@@ -2,7 +2,7 @@ React native template 1
 ====
 
 ## Overview
-
+Spajam対策
 React nativeの練習でbootstrapを参考にコンポーネントをたくさん作成。
 
 ## Quick Start
