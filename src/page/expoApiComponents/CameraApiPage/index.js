@@ -69,10 +69,10 @@ export default class extends React.Component {
           <FlexBox
             justifyContent={'center'}
           >
-            {
-              image &&
+            { image &&
               <Image
                 source={{uri: image}}
+                base64={true}
                 style={{
                   width: deviceWidth,
                   height: deviceWidth,
