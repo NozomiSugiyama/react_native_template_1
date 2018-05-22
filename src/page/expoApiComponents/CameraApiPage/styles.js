@@ -7,9 +7,9 @@ export default {
   content: {
     flex: 1,
   },
-  camera: {
+  image: {
     flex: 1,
-    height: 500,
+    alignItems: 'stretch',
   },
   stab: {},
 };

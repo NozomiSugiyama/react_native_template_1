@@ -1,7 +1,7 @@
 import React from "react"
-import { Text, View } from "react-native"
+import { Text, View, Dimensions } from "react-native"
 import { Actions } from "react-native-router-flux"
-import { Image, Button, Alert, Heading, Page } from "react_native_template_1/src/components"
+import { Image, Button, Alert, Heading, Page, FlexBox } from "react_native_template_1/src/components"
 import { ImagePicker } from 'expo'
 
 import styles from "./styles"
@@ -12,7 +12,8 @@ export default class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      image: null
+      image: null,
+      deviceWidth: Dimensions.get('window').width
     })
   }
 
@@ -43,6 +44,7 @@ export default class extends React.Component {
 
   render() {
     let { image } = this.state;
+    const { deviceWidth } = this.state;
 
     return (
       <Page
@@ -62,15 +64,23 @@ export default class extends React.Component {
           <Button
             onPress={this._pickImage}
           >
-            Camera role
+            Select
           </Button>
-          {
-            image &&
-            <Image
-              source={{uri: image}}
-              style={{width: 300, height: 300}}
-            />
-          }
+          <FlexBox
+            justifyContent={'center'}
+          >
+            {
+              image &&
+              <Image
+                source={{uri: image}}
+                style={{
+                  width: deviceWidth,
+                  height: deviceWidth,
+                  ...styles.image,
+                }}
+              />
+            }
+          </FlexBox>
         </View>
       </Page>
     );
