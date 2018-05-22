@@ -28,6 +28,19 @@ export default class extends React.Component {
     }
   };
 
+  _pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [16, 9]
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      this.setState({image: result.uri});
+    }
+  };
+
   render() {
     let { image } = this.state;
 
@@ -44,7 +57,12 @@ export default class extends React.Component {
           <Button
             onPress={this._takePhoto}
           >
-            open
+            Camera
+          </Button>
+          <Button
+            onPress={this._pickImage}
+          >
+            Camera role
           </Button>
           {
             image &&
