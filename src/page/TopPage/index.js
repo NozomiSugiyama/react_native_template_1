@@ -52,6 +52,7 @@ export default class extends React.Component {
               <ListGroupItem onPress={() => Actions.sliderComponentPage()}>Slider</ListGroupItem>
               <ListGroupItem onPress={() => Actions.switchComponentPage()}>Switch</ListGroupItem>
               <ListGroupItem onPress={() => Actions.textInputComponentPage()}>TextInput</ListGroupItem>
+              <ListGroupItem onPress={() => Actions.animatedComponentPage()}>Animated</ListGroupItem>
             </ListGroup>
             <View>
               <Heading size="small" style={{alignSelf: "flex-start"}}>utility</Heading>
