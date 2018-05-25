@@ -1,6 +1,6 @@
 import React from "react"
-import { Text, View } from "react-native"
-import { Heading, Page, Animated, FlexBox } from "react_native_template_1/src/components"
+import {Text, View, Image, Animated} from "react-native"
+import { Heading, Page, AnimatedSpin, AnimatedFade, FlexBox } from "react_native_template_1/src/components"
 
 import styles from "./styles"
 
@@ -18,11 +18,12 @@ export default class extends React.Component {
           flexDirection={'column'}
           style={styles.view}
         >
-          <Heading
-            size={'small'}
-          >
-            Animated</Heading>
-          <Animated />
+          <Heading size={'small'}>Spin</Heading>
+          <AnimatedSpin
+            style={styles.animated}
+          />
+          <Heading size={'small'}>Fade</Heading>
+          <AnimatedFade/>
         </FlexBox>
       </Page>
 

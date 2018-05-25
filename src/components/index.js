@@ -15,4 +15,5 @@ export { default as Page }            from "./Page";
 export { default as Slider }          from "./Slider";
 export { default as Switch }          from "./Switch";
 export { default as TextInput }       from "./TextInput";
-export { default as Animated }        from "./Animated"
+export { default as AnimatedSpin }    from "./AnimatedSpin"
+export { default as AnimatedFade }    from "./AnimatedFade"

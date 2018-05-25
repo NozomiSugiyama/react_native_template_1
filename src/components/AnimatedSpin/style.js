@@ -1,7 +1,4 @@
-import { colors } from "config";
-
-export default {
-  host: {},
+export const commons = {
   view: {},
   animated: {
     width: 250,
