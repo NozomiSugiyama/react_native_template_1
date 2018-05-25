@@ -26,7 +26,10 @@ export default class extends React.Component {
   };
 
   render() {
-    const fading= this.fadeValue;
+    const {
+      fading = this.fadeValue,
+      children
+    } = this.props;
 
     return (
       <Animated.View
@@ -35,10 +38,7 @@ export default class extends React.Component {
           ...commons.animated,
         }}
       >
-        <Image
-          source={{uri: 'https://cdn-images-1.medium.com/max/1600/1*qUlxDdY3T-rDtJ4LhLGkEg.png'}}
-          style={styles.image}
-        />
+        {children}
       </Animated.View>
     )
   }

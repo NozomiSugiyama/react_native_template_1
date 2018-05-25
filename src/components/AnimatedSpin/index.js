@@ -1,16 +1,23 @@
 import React from "react";
 import { View, NativeModules, Animated, Easing, Text, Image } from "react-native";
 import { commons } from "./style";
-import styles from "../../page/originalComponents/AnimatedComponentPage/styles";
 
 export default class extends React.Component {
 
   componentWillMount() {
-    this.spinValue = new Animated.Value(0)
+    this.spinValue = new Animated.Value(0);
+    this.setState({
+      defaultDuration: undefined
+    })
   };
 
   componentDidMount () {
-    this.spin();
+    (async () => {
+      this.setState({
+        defaultDuration: this.props.defaultDuration
+      })
+    })();
+    this.spin()
   };
 
   spin () {
@@ -19,17 +26,22 @@ export default class extends React.Component {
       this.spinValue,
       {
         toValue: 1,
-        duration: 4000,
+        duration: this.state.defaultDuration,
         easing: Easing.linear
       }
     ).start(() => this.spin())
   };
 
   render() {
-    const spinRotate = this.spinValue.interpolate({
-      inputRange: [0, 1],
-      outputRange: ['0deg', '360deg']
-    });
+    const {
+      spinRotate = this.spinValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['0deg', '360deg']
+      }),
+      spinDuration,
+      children
+    } = this.props;
+
     return (
       <View
         style={commons.view}
@@ -39,11 +51,9 @@ export default class extends React.Component {
             transform: [{"rotate": spinRotate}],
             ...commons.animated,
           }}
+          spinDuration = {!spinDuration && this.state.defaultDuration ? this.state.defaultDuration : spinDuration}
         >
-          <Image
-            source={{uri: 'https://cdn-images-1.medium.com/max/1600/1*qUlxDdY3T-rDtJ4LhLGkEg.png'}}
-            style={styles.image}
-          />
+          {children}
         </Animated.View>
       </View>
     )
