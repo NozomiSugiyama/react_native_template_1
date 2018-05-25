@@ -8,7 +8,8 @@ export default class extends React.Component {
 
   componentWillMount() {
     this.setState({
-      spinDuration: 1000
+      spinDuration: 1000,
+      fadeDuration: 2000
     })
   }
 
@@ -27,16 +28,17 @@ export default class extends React.Component {
           <Heading size={'small'}>Spin</Heading>
           <AnimatedSpin
             style={styles.animated}
-            defaultDuration = {this.state.spinDuration}
+            defaultSpinDuration = {this.state.spinDuration}
           >
             <Image
               source={{uri: 'https://cdn-images-1.medium.com/max/1600/1*qUlxDdY3T-rDtJ4LhLGkEg.png'}}
               style={styles.image}
             />
           </AnimatedSpin>
-          <Heading size={'small'}>Fade</Heading>
+          <Heading size={'small'}>FadeIn</Heading>
           <AnimatedFade
             style={styles.animated}
+            defaultFadeDuration = {this.state.fadeDuration}
           >
             <Image
               source={{uri: 'https://cdn-images-1.medium.com/max/1600/1*qUlxDdY3T-rDtJ4LhLGkEg.png'}}
@@ -45,7 +47,6 @@ export default class extends React.Component {
           </AnimatedFade>
         </FlexBox>
       </Page>
-
     );
   }
 }

@@ -1,33 +1,45 @@
 import React from "react";
 import { View, NativeModules, Animated, Easing, Text, Image } from "react-native";
 import { commons } from "./style";
-import styles from "../../page/originalComponents/AnimatedComponentPage/styles";
 
 export default class extends React.Component {
 
   componentWillMount() {
-    this.fadeValue = new Animated.Value(0)
+    this.fadeValue = new Animated.Value(0);
+    this.setState({
+      defaultFadeDuration: undefined,
+      defaultFadeType: null
+    })
   };
 
   componentDidMount () {
-    this.fadeIn();
+    (async () => {
+      this.setState({
+        defaultFadeDuration: this.props.defaultFadeDuration,
+      })
+    })();
+    this.fade();
   };
 
-  fadeIn () {
+  fade () {
     this.fadeValue.setValue(0)
     Animated.timing(
       this.fadeValue,
       {
         toValue: 1,
-        duration: 2000,
+        duration: this.state.defaultFadeDuration,
         easing: Easing.linear
       }
-    ).start(() => this.fadeIn())
+    ).start(() => this.fade())
   };
 
   render() {
     const {
-      fading = this.fadeValue,
+      fading = this.fadeValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0, 1]
+      }),
+      fadeDuration,
       children
     } = this.props;
 
@@ -37,6 +49,7 @@ export default class extends React.Component {
           opacity: fading,
           ...commons.animated,
         }}
+        fadeDuration = {!fadeDuration && this.state.defaultFadeDuration ? this.state.defaultFadeDuration : fadeDuration}
       >
         {children}
       </Animated.View>

@@ -7,14 +7,14 @@ export default class extends React.Component {
   componentWillMount() {
     this.spinValue = new Animated.Value(0);
     this.setState({
-      defaultDuration: undefined
+      defaultSpinDuration: undefined
     })
   };
 
   componentDidMount () {
     (async () => {
       this.setState({
-        defaultDuration: this.props.defaultDuration
+        defaultSpinDuration: this.props.defaultSpinDuration
       })
     })();
     this.spin()
@@ -26,7 +26,7 @@ export default class extends React.Component {
       this.spinValue,
       {
         toValue: 1,
-        duration: this.state.defaultDuration,
+        duration: this.state.defaultSpinDuration,
         easing: Easing.linear
       }
     ).start(() => this.spin())
@@ -51,7 +51,7 @@ export default class extends React.Component {
             transform: [{"rotate": spinRotate}],
             ...commons.animated,
           }}
-          spinDuration = {!spinDuration && this.state.defaultDuration ? this.state.defaultDuration : spinDuration}
+          spinDuration = {!spinDuration && this.state.defaultSpinDuration ? this.state.defaultSpinDuration : spinDuration}
         >
           {children}
         </Animated.View>
