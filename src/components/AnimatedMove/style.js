@@ -1,12 +1,9 @@
-import { colors } from "config";
-
-export default {
-  host: {},
+export const commons = {
   view: {},
   animated: {
     position: 'relative',
-    width: 250,
-    height: 250,
+    width: 100,
+    height: 100,
   },
   image: {
     width: '100%',
